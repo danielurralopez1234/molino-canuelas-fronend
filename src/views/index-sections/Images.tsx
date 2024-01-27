@@ -1,16 +1,10 @@
-import React from "react";
-
-// reactstrap components
 import { Container, Row, Col } from "reactstrap";
-
-//images
 import heroImage1 from "./../../assets/img/hero-image-1.png"
 import heroImage2 from "./../../assets/img/hero-image-2.png"
 import heroImage3 from "./../../assets/img/hero-image-3.png"
 
 
-// core components
-function Images() {
+const  Images = () => {
   return (
     <>
       <div className="section section-images">

@@ -1,14 +1,8 @@
-import React from "react";
-
-// reactstrap components
 import { Container, Row, Col } from "reactstrap";
+import julie from "./../../assets/img/julie.jpg"
 
-//images
-import julie from "./../../assets/img/julie.jpg" 
 
-// core components
-
-function Typography() {
+const Typography = () => {
   return (
     <>
       <div className="section">

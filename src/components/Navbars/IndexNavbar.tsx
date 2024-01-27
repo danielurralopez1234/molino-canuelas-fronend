@@ -1,6 +1,5 @@
-import React from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-// reactstrap components
 import {
   Button,
   Collapse,
@@ -17,10 +16,10 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
-function IndexNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
-  const [collapseOpen, setCollapseOpen] = React.useState(false);
-  React.useEffect(() => {
+const IndexNavbar = () => {
+  const [navbarColor, setNavbarColor] = useState("navbar-transparent");
+  const [collapseOpen, setCollapseOpen] = useState(false);
+  useEffect(() => {
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > 399 ||
@@ -58,7 +57,7 @@ function IndexNavbar() {
               target="_blank"
               id="navbar-brand"
             >
-              Now UI Kit React
+              Now UI Ki React
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
               Designed by Invision. Coded by Creative Tim

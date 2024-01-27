@@ -1,7 +1,5 @@
-import React from "react";
-// react plugins that creates an input with a date picker
+import { useState } from "react";
 import Datetime from "react-datetime";
-// reactstrap components
 import {
   Button,
   FormGroup,
@@ -16,11 +14,10 @@ import {
   UncontrolledPopover,
 } from "reactstrap";
 
-// core components
 
-function Javascript() {
-  const [modal1, setModal1] = React.useState(false);
-  const [modal2, setModal2] = React.useState(false);
+const Javascript = () => {
+  const [modal1, setModal1] = useState(false);
+  const [modal2, setModal2] = useState(false);
   return (
     <>
       <div className="section section-javascript" id="javascriptComponents">

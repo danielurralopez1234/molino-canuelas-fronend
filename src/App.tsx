@@ -1,15 +1,9 @@
+import Container from './views/Container';
 
 import './App.css'
-import Index from './views/index';
 
 function App() {
-
-  return (
-
-<Index />
-  )
-  
+  return <Container />
 }
-
 
 export default App

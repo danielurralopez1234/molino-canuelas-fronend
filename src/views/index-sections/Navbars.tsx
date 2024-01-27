@@ -1,6 +1,4 @@
-import React from "react";
-
-// reactstrap components
+import { useState } from "react";
 import {
   Collapse,
   DropdownToggle,
@@ -16,14 +14,11 @@ import {
   Row,
   Col
 } from "reactstrap";
-
-//images 
 import bg7 from "./../../assets/img/bg7.jpg"
 
-// core components
 
-function Navbars() {
-  const [collapseOpen, setCollapseOpen] = React.useState(false);
+const Navbars = () => {
+  const [collapseOpen, setCollapseOpen] = useState<boolean>(false);
   return (
     <>
       <div className="section section-navbars">

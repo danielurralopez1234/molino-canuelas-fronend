@@ -1,11 +1,7 @@
-import React from "react";
-
-// reactstrap components
 import { Container, Row, Col } from "reactstrap";
 
-// core components
 
-function CompleteExamples() {
+const CompleteExamples = () => {
   return (
     <>
       <div className="section">

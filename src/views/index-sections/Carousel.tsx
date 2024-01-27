@@ -1,6 +1,4 @@
-import React from "react";
-
-// reactstrap components
+import { useState } from "react";
 import {
   Container,
   Row,
@@ -10,8 +8,7 @@ import {
   CarouselIndicators
 } from "reactstrap";
 
-// core components
-//image
+
 import bg1 from "./../../assets/img/bg1.jpg"
 import bg3 from "./../../assets/img/bg3.jpg"
 import bg4 from "./../../assets/img/bg4.jpg"
@@ -34,9 +31,9 @@ const items = [
   }
 ];
 
-function CarouselSection() {
-  const [activeIndex, setActiveIndex] = React.useState(0);
-  const [animating, setAnimating] = React.useState(false);
+const CarouselSection = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
   const onExiting = () => {
     setAnimating(true);
   };

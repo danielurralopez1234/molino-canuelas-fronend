@@ -1,6 +1,5 @@
-import React from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
-// reactstrap components
 import {
   Button,
   Card,
@@ -17,15 +16,13 @@ import {
   Row
 } from "reactstrap";
 
-//images
 import bg11 from "./../../assets/img/bg11.jpg"
 
-// core components
 
-function SignUp() {
-  const [firstFocus, setFirstFocus] = React.useState(false);
-  const [lastFocus, setLastFocus] = React.useState(false);
-  const [emailFocus, setEmailFocus] = React.useState(false);
+const SignUp = () => {
+  const [firstFocus, setFirstFocus] = useState(false);
+  const [lastFocus, setLastFocus] = useState(false);
+  const [emailFocus, setEmailFocus] = useState(false);
   return (
     <>
       <div

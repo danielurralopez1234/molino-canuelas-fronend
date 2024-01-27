@@ -1,6 +1,4 @@
-import React from "react";
-
-// reactstrap components
+import { useState } from "react";
 import {
   Card,
   CardHeader,
@@ -15,11 +13,10 @@ import {
   Col,
 } from "reactstrap";
 
-// core components
 
-function Tabs() {
-  const [iconPills, setIconPills] = React.useState("1");
-  const [pills, setPills] = React.useState("1");
+const Tabs = () => {
+  const [iconPills, setIconPills] = useState("1");
+  const [pills, setPills] = useState("1");
   return (
     <>
       <div className="section section-tabs">

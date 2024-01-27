@@ -1,10 +1,5 @@
-import React from "react";
-// react plugin used to create switch buttons
-import Switch from "react-bootstrap-switch";
-// plugin that creates slider
+import { useEffect, useState } from "react";
 import Slider from "nouislider";
-
-// reactstrap components
 import {
   Button,
   Label,
@@ -18,12 +13,11 @@ import {
   Col,
 } from "reactstrap";
 
-// core components
 
-function BasicElements() {
-  const [leftFocus, setLeftFocus] = React.useState(false);
-  const [rightFocus, setRightFocus] = React.useState(false);
-  React.useEffect(() => {
+const BasicElements = () => {
+  const [leftFocus, setLeftFocus] = useState(false);
+  const [rightFocus, setRightFocus] = useState(false);
+  useEffect(() => {
     if (
       !document.getElementById("sliderRegular")?.classList.contains("noUi-target")
     ) {
@@ -273,9 +267,6 @@ function BasicElements() {
             </Col>
             <Col lg="3" sm="6">
               <p className="category">Toggle Buttons</p>
-              {/* <Switch offColor="" offText="" onColor="" onText=""></Switch>
-              <br></br>
-              <Switch defaultValue={false} offColor="" onColor=""></Switch> */}
             </Col>
             <Col lg="3" sm="6">
               <p className="category">Sliders</p>

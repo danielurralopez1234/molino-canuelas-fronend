@@ -1,14 +1,9 @@
-import React from "react";
 import { Link } from "react-router-dom";
-// reactstrap components
 import { Button, Container, Row } from "reactstrap";
-
-// core components
-//image
-import landing from  "./../../assets/img/landing.jpg" 
+import landing from "./../../assets/img/landing.jpg"
 import profile from "./../../assets/img/profile.jpg"
 
-function Examples() {
+const Examples = () => {
   return (
     <>
       <div className="section section-examples" data-background-color="black">

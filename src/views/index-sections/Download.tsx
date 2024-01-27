@@ -1,11 +1,6 @@
-import React from "react";
-
-// reactstrap components
 import { Button, Container, Row, Col, UncontrolledTooltip } from "reactstrap";
 
-// core components
-
-function Download() {
+const  Download = () => {
   return (
     <>
       <div

@@ -1,6 +1,4 @@
-import React from "react";
-
-// reactstrap components
+import { useState } from "react";
 import {
   Badge,
   NavItem,
@@ -15,10 +13,9 @@ import {
   Col,
 } from "reactstrap";
 
-// core components
 
-function PaginationSection() {
-  const [pills, setPills] = React.useState("2");
+const PaginationSection = () => {
+  const [pills, setPills] = useState("2");
   return (
     <>
       <div className="section section-pagination">
