@@ -3,8 +3,8 @@ import { Container } from "reactstrap";
 import logoMolinoCanuelas from "./../../assets/img/logoMolinoCanuelas.png";
 import { gsap } from "gsap";
 import SplitType from "split-type";
-const ourText = new SplitType("p.our-text", { types: "chars" });
-const chars = ourText.chars;
+// const ourText = new SplitType("p.our-text", { types: "chars" });
+// const chars = ourText.chars;
 
 import header from "./../../assets/img/header.jpg";
 
