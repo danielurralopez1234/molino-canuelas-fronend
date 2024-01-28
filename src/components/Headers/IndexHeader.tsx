@@ -10,7 +10,7 @@ import header from "./../../assets/img/header.jpg";
 
 const IndexHeader = () => {
   let pageHeader = createRef<any>();
-  const textRef = useRef(null);
+  // const textRef = useRef(null);
 
   useEffect(() => {
     if (window.innerWidth > 991) {
