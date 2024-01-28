@@ -1,6 +1,7 @@
 import { createRef, useEffect } from "react";
 import { Container } from "reactstrap";
-import logo from "./../../assets/img/now-logo.png"
+// import logo from "./../../assets/img/now-logo.png"
+import logoMolinoCanuelas from "./../../assets/img/logoMolinoCanuelas.png"
 import header from "./../../assets/img/header.jpg"
 import slim from "./../../assets/img/invision-white-slim.png"
 import slim2 from "./../../assets/img/creative-tim-white-slim2.png"
@@ -40,12 +41,11 @@ const IndexHeader = () => {
             <img
               alt="..."
               className="n-logo"
-              src={logo}
+              src={logoMolinoCanuelas}
             ></img>
-            <h1 className="h1-seo">Now UI Kit...</h1>
-            <h3>A beautiful Bootstrap 4 UI kit. Yours free.</h3>
+            <h3>Somos el molino más grande de Sudamérica, nos enorgullece anunciar la presencia de nuestra prestigiosa marca de harina, Adelia María, en Chile, de la mano del distribuidor oficial Los Leños</h3>
           </div>
-          <h6 className="category category-absolute">
+          {/* <h6 className="category category-absolute">
             Designed by{" "}
             <a href="http://invisionapp.com/?ref=creativetim" target="_blank">
               <img
@@ -66,7 +66,7 @@ const IndexHeader = () => {
               ></img>
             </a>
             .
-          </h6>
+          </h6> */}
         </Container>
       </div>
     </>

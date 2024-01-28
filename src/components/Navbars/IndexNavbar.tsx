@@ -16,6 +16,8 @@ import {
   UncontrolledTooltip,
 } from "reactstrap";
 
+import logoMolinoCanuelas from "./../../assets/img/logoMolinoCanuelas.png"
+
 const IndexNavbar = () => {
   const [navbarColor, setNavbarColor] = useState("navbar-transparent");
   const [collapseOpen, setCollapseOpen] = useState(false);
@@ -53,14 +55,20 @@ const IndexNavbar = () => {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="https://demos.creative-tim.com/now-ui-kit-react/#/index?ref=nukr-index-navbar"
-              target="_blank"
-              id="navbar-brand"
+               id="navbar-brand"
             >
-              Now UI Ki React
+              <div className="content-center brand">
+            <img
+              alt="..."
+              className="n-logo"
+              src={logoMolinoCanuelas}
+              style={{maxWidth: "70px",marginBottom:"0"}}
+            ></img>
+           
+          </div>
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
-              Designed by Invision. Coded by Creative Tim
+              Molino Cañuelas | Chile
             </UncontrolledTooltip>
             <button
               className="navbar-toggler navbar-toggler"
@@ -87,7 +95,7 @@ const IndexNavbar = () => {
                   href="#pablo"
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById("download-section")?.scrollIntoView();
+                    document.getElementById("download-section")?.scrollIntoView({behavior: 'smooth'});
                   }}
                 >
                   <i className="now-ui-icons arrows-1_cloud-download-93"></i>
