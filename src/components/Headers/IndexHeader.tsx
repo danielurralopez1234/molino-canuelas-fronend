@@ -1,4 +1,4 @@
-import { createRef, useEffect, useRef } from "react";
+import { createRef, useEffect } from "react";
 import { Container } from "reactstrap";
 import logoMolinoCanuelas from "./../../assets/img/logoMolinoCanuelas.png";
 import { gsap } from "gsap";
