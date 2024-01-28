@@ -55,6 +55,11 @@ const IndexNavbar = () => {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
+            href="#pablo"
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById("inicio")?.scrollIntoView({behavior: 'smooth'});
+            }}
                id="navbar-brand"
             >
               <div className="content-center brand">

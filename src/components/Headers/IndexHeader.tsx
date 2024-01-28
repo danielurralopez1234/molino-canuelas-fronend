@@ -1,6 +1,5 @@
 import { createRef, useEffect } from "react";
 import { Container } from "reactstrap";
-// import logo from "./../../assets/img/now-logo.png"
 import logoMolinoCanuelas from "./../../assets/img/logoMolinoCanuelas.png"
 import header from "./../../assets/img/header.jpg"
 import slim from "./../../assets/img/invision-white-slim.png"
@@ -28,7 +27,7 @@ const IndexHeader = () => {
 
   return (
     <>
-      <div className="page-header clear-filter" filter-color="blue">
+      <div className="page-header clear-filter" filter-color="blue" id="inicio">
         <div
           className="page-header-image"
           style={{
