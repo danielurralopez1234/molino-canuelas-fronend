@@ -4,8 +4,6 @@ import logoMolinoCanuelas from "./../../assets/img/logoMolinoCanuelas.png";
 import Typewriter from "typewriter-effect";
 
 import header from "./../../assets/img/header.jpg";
-import slim from "./../../assets/img/invision-white-slim.png";
-import slim2 from "./../../assets/img/creative-tim-white-slim2.png";
 
 const IndexHeader = () => {
   let pageHeader = createRef<any>();
