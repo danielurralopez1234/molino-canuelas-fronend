@@ -12,6 +12,7 @@
     "minify-sass": "sass src/assets/scss/now-ui-kit.scss src/assets/css/now-ui-kit.min.css --style compressed"
   },
   "dependencies": {
+    "gsap": "^3.12.5",
     "nouislider": "^15.4.0",
     "react": "^18.2.0",
     "react-bootstrap-switch": "^15.5.3",
@@ -20,7 +21,7 @@
     "react-router-dom": "^6.11.1",
     "reactstrap": "^8.10.0",
     "sass": "^1.62.1",
-    "typewriter-effect": "^2.21.0"
+    "split-type": "^0.3.4"
   },
   "devDependencies": {
     "@types/node": "^20.11.7",
