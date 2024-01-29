@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import {
-  Button,
   Collapse,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
   NavbarBrand,
   Navbar,
   NavItem,
@@ -55,22 +49,22 @@ const IndexNavbar = () => {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-            href="#pablo"
-            onClick={(e) => {
-              e.preventDefault();
-              document.getElementById("inicio")?.scrollIntoView({behavior: 'smooth'});
-            }}
-               id="navbar-brand"
+              href="#pablo"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById("inicio")?.scrollIntoView({ behavior: 'smooth' });
+              }}
+              id="navbar-brand"
             >
               <div className="content-center brand">
-            <img
-              alt="..."
-              className="n-logo"
-              src={logoMolinoCanuelas}
-              style={{maxWidth: "70px",marginBottom:"0"}}
-            ></img>
-           
-          </div>
+                <img
+                  alt="..."
+                  className="n-logo"
+                  src={logoMolinoCanuelas}
+                  style={{ maxWidth: "70px", marginBottom: "0" }}
+                ></img>
+
+              </div>
             </NavbarBrand>
             <UncontrolledTooltip target="#navbar-brand">
               Molino Cañuelas | Chile
@@ -100,7 +94,7 @@ const IndexNavbar = () => {
                   href="#pablo"
                   onClick={(e) => {
                     e.preventDefault();
-                    document.getElementById("quienes-somos")?.scrollIntoView({behavior: 'smooth'});
+                    document.getElementById("quienes-somos")?.scrollIntoView({ behavior: 'smooth' });
                   }}
                 >
                   <p>Quienes Somos</p>
@@ -147,7 +141,7 @@ const IndexNavbar = () => {
                   <p className="d-lg-none d-xl-none">Whatsapp</p>
                 </NavLink>
                 <UncontrolledTooltip target="#twitter-tooltip">
-                Hablanos en Whatsapp
+                  Hablanos en Whatsapp
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
@@ -160,7 +154,7 @@ const IndexNavbar = () => {
                   <p className="d-lg-none d-xl-none">Facebook</p>
                 </NavLink>
                 <UncontrolledTooltip target="#facebook-tooltip">
-                Síguenos en Facebook
+                  Síguenos en Facebook
                 </UncontrolledTooltip>
               </NavItem>
               <NavItem>
@@ -173,7 +167,7 @@ const IndexNavbar = () => {
                   <p className="d-lg-none d-xl-none">Instagram</p>
                 </NavLink>
                 <UncontrolledTooltip target="#instagram-tooltip">
-                Síguenos en Instagram
+                  Síguenos en Instagram
                 </UncontrolledTooltip>
               </NavItem>
             </Nav>
