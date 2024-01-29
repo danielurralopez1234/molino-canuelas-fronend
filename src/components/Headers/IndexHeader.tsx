@@ -1,16 +1,13 @@
 import { createRef, useEffect } from "react";
 import { Container } from "reactstrap";
-import logoMolinoCanuelas from "./../../assets/img/logoMolinoCanuelas.png";
+import logoChile from "./../../assets/img/logoChile.png";
 import { gsap } from "gsap";
 import SplitType from "split-type";
-// const ourText = new SplitType("p.our-text", { types: "chars" });
-// const chars = ourText.chars;
 
 import header from "./../../assets/img/header.jpg";
 
 const IndexHeader = () => {
   let pageHeader = createRef<any>();
-  // const textRef = useRef(null);
 
   useEffect(() => {
     if (window.innerWidth > 991) {
@@ -57,7 +54,7 @@ const IndexHeader = () => {
         ></div>
         <Container>
           <div className="content-center brand">
-            <img alt="..." className="n-logo" src={logoMolinoCanuelas}></img>
+            <img alt="..." className="n-logo" src={logoChile} style={{maxWidth:"100%"}}></img>
             <div className="our-text" style={{ textAlign: "center" }}>
               <h3>
                 Somos el molino más grande de Sudamérica, nos <br />
