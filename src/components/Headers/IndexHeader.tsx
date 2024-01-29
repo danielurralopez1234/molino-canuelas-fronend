@@ -54,13 +54,18 @@ const IndexHeader = () => {
         ></div>
         <Container>
           <div className="content-center brand">
-            <img alt="..." className="n-logo" src={logoChile} style={{maxWidth:"100%"}}></img>
+            <img
+              alt="..."
+              className="n-logo"
+              src={logoChile}
+              style={{ maxWidth: "100%" }}
+            ></img>
             <div className="our-text" style={{ textAlign: "center" }}>
               <h3>
                 Somos el molino más grande de Sudamérica, nos <br />
                 enorgullece anunciar la presencia de nuestra <br />
-                prestigiosa marca de harina, Adelia María, en Chile, <br />de la mano
-                del distribuidor oficial Los Leños.
+                prestigiosa marca de harina, Adelia María, en Chile, <br />
+                de la mano del distribuidor oficial Los Leños.
               </h3>
             </div>
           </div>
