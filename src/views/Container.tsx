@@ -1,19 +1,8 @@
 import { useEffect } from "react";
-import { IndexHeader, IndexNavbar, DarkFooter } from '../components'
+import { IndexHeader, IndexNavbar } from '../components'
 import {
   Images,
-  BasicElements,
-  Navbars,
-  Tabs,
-  PaginationSection,
-  Notifications,
-  Typography,
-  Javascript,
-  NucleoIcons,
-  CarouselSection,
-  CompleteExamples,
   SignUp,
-  Examples,
   Download
 } from "./index-sections";
 
