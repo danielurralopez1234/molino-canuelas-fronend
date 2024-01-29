@@ -13,6 +13,7 @@ import {
   InputGroupText,
   InputGroup,
   Container,
+  
   Row
 } from "reactstrap";
 
@@ -40,7 +41,7 @@ const SignUp = () => {
               <Form action="" className="form" method="">
                 <CardHeader className="text-center">
                   <CardTitle className="title-up" tag="h3">
-                    Sign Up
+                    Contacto
                   </CardTitle>
                   <div className="social-line">
                     <Button
@@ -53,20 +54,20 @@ const SignUp = () => {
                     </Button>
                     <Button
                       className="btn-neutral btn-icon btn-round"
-                      color="twitter"
+                      color="whatsapp"
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                       size="lg"
                     >
-                      <i className="fab fa-twitter"></i>
+                      <i className="fab fa-whatsapp"></i>
                     </Button>
                     <Button
                       className="btn-neutral btn-icon btn-round"
-                      color="google"
+                      color="instagram"
                       href="#pablo"
                       onClick={(e) => e.preventDefault()}
                     >
-                      <i className="fab fa-google-plus"></i>
+                      <i className="fab fa-instagram"></i>
                     </Button>
                   </div>
                 </CardHeader>
@@ -82,7 +83,7 @@ const SignUp = () => {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="First Name..."
+                      placeholder="Primer Nombre..."
                       type="text"
                       onFocus={() => setFirstFocus(true)}
                       onBlur={() => setFirstFocus(false)}
@@ -99,7 +100,7 @@ const SignUp = () => {
                       </InputGroupText>
                     </InputGroupAddon>
                     <Input
-                      placeholder="Last Name..."
+                      placeholder="Segundo Nombre..."
                       type="text"
                       onFocus={() => setLastFocus(true)}
                       onBlur={() => setLastFocus(false)}
@@ -122,6 +123,20 @@ const SignUp = () => {
                       onBlur={() => setEmailFocus(false)}
                     ></Input>
                   </InputGroup>
+                  <InputGroup
+                    className={
+                      "no-border" + (emailFocus ? " input-group-focus" : "")
+                    }
+                  >
+                    <InputGroupAddon addonType="prepend">
+                    </InputGroupAddon>
+                    <Input
+                      placeholder="Mensaje..."
+                      type="textarea"
+                      onFocus={() => setEmailFocus(true)}
+                      onBlur={() => setEmailFocus(false)}
+                    ></Input>
+                  </InputGroup>
                 </CardBody>
                 <CardFooter className="text-center">
                   <Button
@@ -131,24 +146,12 @@ const SignUp = () => {
                     onClick={(e) => e.preventDefault()}
                     size="lg"
                   >
-                    Get Started
+                    Enviar
                   </Button>
                 </CardFooter>
               </Form>
             </Card>
           </Row>
-          <div className="col text-center">
-            <Button
-              className="btn-round btn-white"
-              color="default"
-              to="/login-page"
-              outline
-              size="lg"
-              tag={Link}
-            >
-              View Login Page
-            </Button>
-          </div>
         </Container>
       </div>
     </>
