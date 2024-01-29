@@ -1,18 +1,13 @@
-import { createRef, useEffect, useRef } from "react";
+import { createRef, useEffect } from "react";
 import { Container } from "reactstrap";
 import logoChile from "./../../assets/img/logoChile.png";
 import { gsap } from "gsap";
 import SplitType from "split-type";
-const ourText = new SplitType("p.our-text", { types: "chars" });
-const chars = ourText.chars;
 
 import header from "./../../assets/img/header.jpg";
-import slim from "./../../assets/img/invision-white-slim.png";
-import slim2 from "./../../assets/img/creative-tim-white-slim2.png";
 
 const IndexHeader = () => {
   let pageHeader = createRef<any>();
-  const textRef = useRef(null);
 
   useEffect(() => {
     if (window.innerWidth > 991) {
