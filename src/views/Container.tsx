@@ -39,21 +39,14 @@ const Container = () => {
         <IndexHeader />
         <div className="main">
           <Images />
-          <BasicElements />
-          <Navbars />
-          <Tabs />
-          <PaginationSection />
-          <Notifications />
-          <Typography />
-          <Javascript />
-          <CarouselSection />
-          <NucleoIcons />
-          <CompleteExamples />
+
+
+      
+
+
           <SignUp />
-          <Examples />
           <Download />
         </div>
-        <DarkFooter />
       </div>
     </>
   );
