@@ -28,11 +28,6 @@ const Container = () => {
         <IndexHeader />
         <div className="main">
           <Images />
-
-
-      
-
-
           <SignUp />
           <Download />
         </div>
