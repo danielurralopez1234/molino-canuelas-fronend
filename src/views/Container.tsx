@@ -6,6 +6,8 @@ import {
   Download
 } from "./index-sections";
 
+import "./../assets/css/whatsapp.css"
+
 
 const Container = () => {
 
@@ -31,7 +33,11 @@ const Container = () => {
           <SignUp />
           <Download />
         </div>
+        <a href="https://wa.me/56987587393" target="_blank" className="whatsapp-btn">
+  <i className="bi bi-whatsapp"></i>
+</a>
       </div>
+     
     </>
   );
 }
