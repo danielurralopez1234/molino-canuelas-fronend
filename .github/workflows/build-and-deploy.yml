@@ -1,0 +1,45 @@
+name: Build and deploy React App to CloudFront
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build-and-deploy:
+    name: Build and Deploy
+    runs-on: ubuntu-latest
+    env:
+      BUCKET: molino-canuelas-s3-cli
+      DIST: dist
+      REGION: us-east-1
+      DIST_ID: E29J7I56PEOKZ1
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v2
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.REGION }}
+
+      - name: Install Dependencies
+        run: |
+          node --version
+          npm ci --production
+          npm install --save-dev @types/react
+
+      - name: Run Tests
+        run: npm test
+
+      - name: Build Static Website
+        run: npm run build
+
+      - name: Copy files to the production website with the AWS CLI
+        run: |
+          aws s3 sync --delete ${{env.DIST}}  s3://${{env.BUCKET}}
+
+      - name: invalidation to CloudFront. delete cache files
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{env.DIST_ID}} \
+            --paths "/*"
