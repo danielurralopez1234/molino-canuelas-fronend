@@ -49,7 +49,7 @@ const IndexNavbar = () => {
         <Container>
           <div className="navbar-translate">
             <NavbarBrand
-              href="#pablo"
+              href="#"
               onClick={(e) => {
                 e.preventDefault();
                 document.getElementById("inicio")?.scrollIntoView({ behavior: 'smooth' });
@@ -89,22 +89,15 @@ const IndexNavbar = () => {
             navbar
           >
             <Nav navbar>
-              <NavItem>
-                <NavLink
-                  href="#pablo"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.getElementById("quienes-somos")?.scrollIntoView({ behavior: 'smooth' });
-                  }}
-                >
-                  <p>Quienes Somos</p>
-                </NavLink>
-              </NavItem>
               <NavItem >
                 <NavLink
-                  href=""
+                  href="#"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    document.getElementById("productos")?.scrollIntoView({ behavior: 'smooth' });
+                  }}
                 >
-                  <p>Productos Industriales</p>
+                  <p>Productos</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -112,7 +105,7 @@ const IndexNavbar = () => {
                   id="upgrade-to-pro"
                   target="_blank"
                 >
-                  <p>Nuestros Servicios</p>
+                  <p>Quienes somos</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -120,7 +113,7 @@ const IndexNavbar = () => {
                   id="upgrade-to-pro"
                   target="_blank"
                 >
-                  <p>Distribución</p>
+                  <p>TRAYECTORIA Y CRECIMIENTO</p>
                 </NavLink>
               </NavItem>
               <NavItem>
@@ -130,45 +123,6 @@ const IndexNavbar = () => {
                 >
                   <p>Contacto</p>
                 </NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://wa.me/56987587393"
-                  target="_blank"
-                  id="twitter-tooltip"
-                >
-                  <i className="fab fa-whatsapp"></i>
-                  <p className="d-lg-none d-xl-none">Whatsapp</p>
-                </NavLink>
-                <UncontrolledTooltip target="#twitter-tooltip">
-                  Hablanos en Whatsapp
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://www.facebook.com/profile.php?id=100090204047178&mibextid=2JQ9oc"
-                  target="_blank"
-                  id="facebook-tooltip"
-                >
-                  <i className="fab fa-facebook-square"></i>
-                  <p className="d-lg-none d-xl-none">Facebook</p>
-                </NavLink>
-                <UncontrolledTooltip target="#facebook-tooltip">
-                  Síguenos en Facebook
-                </UncontrolledTooltip>
-              </NavItem>
-              <NavItem>
-                <NavLink
-                  href="https://www.instagram.com/distribuidoraloslenos?igsh=MTdpamg1Mjl4YW9pcA=="
-                  target="_blank"
-                  id="instagram-tooltip"
-                >
-                  <i className="fab fa-instagram"></i>
-                  <p className="d-lg-none d-xl-none">Instagram</p>
-                </NavLink>
-                <UncontrolledTooltip target="#instagram-tooltip">
-                  Síguenos en Instagram
-                </UncontrolledTooltip>
               </NavItem>
             </Nav>
           </Collapse>

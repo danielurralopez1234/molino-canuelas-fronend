@@ -17,13 +17,13 @@ import mapaChile from "./../../assets/img/mapa_chile.png";
 const Images = () => {
   return (
     <>
-      <div className="section section-images" style={{height:"100%",maxHeight:"100%"}} id="quienes-somos">
+      <div className="section section-images" style={{height:"100%",maxHeight:"100%"}} >
         <Container>
           <Row>
             <Col className="ml-auto mr-auto">
               <h2 className="category" style={{ color: "#5996c9" }}>
                 {" "}
-                Quienes Somos
+                PRODUCTOS
               </h2>
               <Card>
                 <CardBody>
@@ -89,7 +89,7 @@ const Images = () => {
                     activeTab={"iconPills" + 1}
                   >
                     <TabPane tabId="iconPills1">
-                      <p style={{ textAlign: "justify", color: "white" }}>
+                      <p style={{ textAlign: "justify", color: "white",overflowWrap:"break-word" }}>
                         Producir, comercializar e industrializar materias primas
                         para elaborar y ofrecer al mercado global los productos
                         derivados; brindando un ÓPTIMO servicio y un elevado
