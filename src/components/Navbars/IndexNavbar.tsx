@@ -6,7 +6,6 @@ import {
   NavItem,
   NavLink,
   Nav,
-  Container,
   UncontrolledTooltip,
 } from "reactstrap";
 
@@ -46,7 +45,6 @@ const IndexNavbar = () => {
         />
       ) : null}
       <Navbar className={"fixed-top " + navbarColor} expand="lg" color="info">
-        <Container>
           <div className="navbar-translate">
             <NavbarBrand
               href="#"
@@ -126,7 +124,6 @@ const IndexNavbar = () => {
               </NavItem>
             </Nav>
           </Collapse>
-        </Container>
       </Navbar>
     </>
   );

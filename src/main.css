@@ -1,0 +1,31 @@
+#root {
+  max-width: 75%;
+  margin: 0 auto;
+  background-color: burlywood;
+}
+
+@media screen and (max-width: 768px) {
+  #root {
+    max-width: 100%;
+  }
+}
+@keyframes move {
+  0% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+body {
+  background-image: url("./assets/background/protruding-squares.svg");
+  background-size: auto;
+  background-repeat: repeat;
+  /*animation: move 15s linear infinite;*/
+  margin: 0;
+  overflow-y: overlay;
+  font-family: "Poppins Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
