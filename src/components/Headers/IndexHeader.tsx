@@ -9,7 +9,7 @@ import {
 } from "reactstrap";
 
 
-import logoChile from "./../../assets/img/logoChile.png";
+import logoTextoColores from "./../../assets/img/logo_texto_colores.png";
 import carrusel from "./../../assets/img/carrusel.jpg";
 import carrusel2 from "./../../assets/img/carrusel2.jpg";
 import carrusel3 from "./../../assets/img/carrusel3.jpg";
@@ -58,16 +58,10 @@ const IndexHeader = () => {
                 <div>
                   <div>
                     <img
-                      src="https://www.harinaselecta.cl/img/bienvenidos_al_mundo_selecta.png"
+                      src={logoTextoColores}
                       className="img-fluid" alt="carousel">
                     </img>
                   </div>
-                  <p style={{ color: 'black' }}>
-                    Somos el molino más grande de Sudamérica, nos enorgullece
-                    anunciar la presencia de nuestra prestigiosa marca de
-                    harina, Adelia María, en Chile, de la mano del distribuidor
-                    oficial Los Leños.
-                  </p>
                 </div>
               </Col>
               <div
