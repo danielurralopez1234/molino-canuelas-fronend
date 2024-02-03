@@ -3,7 +3,7 @@ import { Button, ModalBody, Modal } from "reactstrap";
 
 interface IProps {
   isVisible: boolean;
-  setIsVisible: () => {};
+  setIsVisible:any;
 }
 
 const ProductosModal = (props: IProps): ReturnType<FC> => {
@@ -11,12 +11,12 @@ const ProductosModal = (props: IProps): ReturnType<FC> => {
 
   return (
     <>
-      <Modal isOpen={isVisible} toggle={() => setIsVisible()}>
+      <Modal isOpen={isVisible} toggle={() => setIsVisible(false)}>
         <div className="modal-header justify-content-center">
           <button
             className="close"
             type="button"
-            onClick={() => setIsVisible()}
+            onClick={() => setIsVisible(false)}
           >
             <i className="now-ui-icons ui-1_simple-remove"></i>
           </button>
@@ -33,7 +33,7 @@ const ProductosModal = (props: IProps): ReturnType<FC> => {
           </p>
         </ModalBody>
         <div className="modal-footer">
-          <Button color="danger" type="button" onClick={() => setIsVisible()}>
+          <Button color="danger" type="button" onClick={() => setIsVisible(false)}>
             Close
           </Button>
         </div>
