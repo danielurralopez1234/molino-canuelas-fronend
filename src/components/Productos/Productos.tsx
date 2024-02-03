@@ -1,6 +1,3 @@
-interface ModalProps {
-  open: boolean;
-}
 import { useState } from "react";
 import {
   Col,
@@ -22,8 +19,8 @@ import "./productos.css";
 import ProcductosModal from "./Modal/ProducttosModal";
 
 const Productos = () => {
-  const [modal, setModal] = useState(false);
-  
+  const [isVisibleModal, setIsVisibleModal] = useState<boolean>(false);
+
   const [activeIndex, setActiveIndex] = useState(0);
   const next = () => {
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
@@ -39,8 +36,8 @@ const Productos = () => {
     setActiveIndex(newIndex);
   };
 
-  const stateModalFunction =()=>{
-    setModal(true);
+  const stateModalFunction = () => {
+    setIsVisibleModal(!isVisibleModal);
   }
 
   const items = [
@@ -105,7 +102,7 @@ const Productos = () => {
               <Button
                 color="info"
                 className="mr-1"
-                onClick={stateModalFunction}
+                onClick={() => stateModalFunction()}
               >
                 Ver mas
               </Button>
@@ -113,7 +110,7 @@ const Productos = () => {
           </div>
         </Row>
       </Container>
-      <ProcductosModal open={modal}/>
+      <ProcductosModal isVisible={isVisibleModal} setIsVisible={setIsVisibleModal} />
     </div>
   );
 };

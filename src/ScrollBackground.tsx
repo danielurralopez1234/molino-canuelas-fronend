@@ -10,7 +10,7 @@ function ScrollBackground() {
       const backgroundColor = `hsl(60, 100%, ${100 - scrollPercentage}%)`; // Cambiar el color de fondo según el porcentaje de desplazamiento
 
       rootElement.style.backgroundColor = backgroundColor;
-      // svgElement.style.backgroundColor = backgroundColor;
+      svgElement.style.backgroundColor = backgroundColor;
     };
 
     window.addEventListener('scroll', handleScroll);

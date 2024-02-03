@@ -1,31 +1,22 @@
-interface ModalProps {
-  open: boolean;
-}
-import { FC, useEffect, useState } from "react";
+import { FC } from "react";
 import { Button, ModalBody, Modal } from "reactstrap";
 
-export default function ProductosModal(props: ModalProps): ReturnType<FC> {
-  const [modal, setModal] = useState(false);
+interface IProps {
+  isVisible: boolean;
+  setIsVisible: () => {};
+}
 
-  // useEffect(() => {
-  //   const open = props.open;
-
-  //   console.log(open, "open");
-  //   console.log(modal, "modal");
-  //   setModal(open);
-  //   // if ( modal == false) {
-  //   //   setModal(false);
-  //   // }
-  // }, [,props.open,modal]);
+const ProductosModal = (props: IProps): ReturnType<FC> => {
+  const {isVisible, setIsVisible } = props;
 
   return (
     <>
-      <Modal isOpen={modal} toggle={() => setModal(false)}>
+      <Modal isOpen={isVisible} toggle={() => setIsVisible()}>
         <div className="modal-header justify-content-center">
           <button
             className="close"
             type="button"
-            onClick={() => setModal(false)}
+            onClick={() => setIsVisible()}
           >
             <i className="now-ui-icons ui-1_simple-remove"></i>
           </button>
@@ -42,7 +33,7 @@ export default function ProductosModal(props: ModalProps): ReturnType<FC> {
           </p>
         </ModalBody>
         <div className="modal-footer">
-          <Button color="danger" type="button" onClick={() => setModal(false)}>
+          <Button color="danger" type="button" onClick={() => setIsVisible()}>
             Close
           </Button>
         </div>
@@ -50,3 +41,5 @@ export default function ProductosModal(props: ModalProps): ReturnType<FC> {
     </>
   );
 }
+
+export default ProductosModal;
