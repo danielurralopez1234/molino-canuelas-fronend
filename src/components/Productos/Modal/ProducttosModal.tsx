@@ -3,11 +3,11 @@ import { Button, ModalBody, Modal } from "reactstrap";
 
 interface IProps {
   isVisible: boolean;
-  setIsVisible:any;
+  setIsVisible: (value: boolean) => void;
 }
 
 const ProductosModal = (props: IProps): ReturnType<FC> => {
-  const {isVisible, setIsVisible } = props;
+  const { isVisible, setIsVisible } = props;
 
   return (
     <>
