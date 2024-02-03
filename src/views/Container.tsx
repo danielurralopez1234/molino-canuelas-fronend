@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { IndexHeader, IndexNavbar } from '../components'
 import {
-  Images,
+  Productos,
   SignUp,
   Download
 } from "./index-sections";
@@ -29,7 +29,7 @@ const Container = () => {
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
-          <Images />
+          <Productos />
           <SignUp />
           <Download />
         </div>
