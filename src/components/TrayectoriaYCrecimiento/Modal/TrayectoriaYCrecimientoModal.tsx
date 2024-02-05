@@ -1,5 +1,9 @@
 import { FC } from "react";
-import { Button, ModalBody, Modal } from "reactstrap";
+import { ModalBody, Modal } from "reactstrap";
+
+//image
+import imgClose from "./../../../assets/img/close_icon.svg";
+import "./trayectoriaYCrecimientosModal.css";
 
 interface IProps {
   isVisible: boolean;
@@ -18,7 +22,7 @@ const TrayectoriaYCrecimientoModal = (props: IProps): ReturnType<FC> => {
             type="button"
             onClick={() => setIsVisible(false)}
           >
-            <i className="now-ui-icons ui-1_simple-remove"></i>
+            <img className="image-close" src={imgClose} />
           </button>
           <h4 className="title title-up">Modal title</h4>
         </div>
@@ -32,14 +36,10 @@ const TrayectoriaYCrecimientoModal = (props: IProps): ReturnType<FC> => {
             country, in which roasted parts of sentences fly into your mouth.
           </p>
         </ModalBody>
-        <div className="modal-footer">
-          <Button color="danger" type="button" onClick={() => setIsVisible(false)}>
-            Close
-          </Button>
-        </div>
+        <div className="modal-footer"></div>
       </Modal>
     </>
   );
-}
+};
 
 export default TrayectoriaYCrecimientoModal;
