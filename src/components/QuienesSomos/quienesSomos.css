@@ -14,13 +14,7 @@
 .principal-container {
   width: 90%;
 }
-.zoom {
-  transition: transform .2s; 
-}
 
-.zoom:hover {
-  transform: scale(1.5); 
-}
 .container-element {
   margin-top: "65px";
   display: flex;

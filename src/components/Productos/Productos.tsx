@@ -10,13 +10,13 @@ import {
 } from "reactstrap";
 
 import logoProductos from "./../../assets/img/logoProductos.png";
-import carrusel from "./../../assets/img/carrusel.jpg";
-import carrusel2 from "./../../assets/img/carrusel2.jpg";
-import carrusel3 from "./../../assets/img/carrusel3.jpg";
-import carruselfinal from "./../../assets/img/carruselfinal.jpg";
+
+import carrusel from "./../../assets/img/carrusel_image_1.png";
+import carrusel2 from "./../../assets/img/carrusel_img_2.png";
+import carrusel3 from "./../../assets/img/carrusel_img_3.png";
 
 import "./productos.css";
-import ProcductosModal from "./Modal/ProducttosModal";
+import ProcductosModal from "./Modal/ProductosModal";
 
 const Productos = () => {
   const [isVisibleModal, setIsVisibleModal] = useState<boolean>(false);
@@ -50,9 +50,6 @@ const Productos = () => {
     {
       src: carrusel3,
     },
-    {
-      src: carruselfinal,
-    },
   ];
 
   return (
@@ -78,8 +75,8 @@ const Productos = () => {
                   />
                   {items.map((item) => {
                     return (
-                      <CarouselItem key={item.src}>
-                        <img src={item.src} />
+                      <CarouselItem  key={item.src}>
+                        <img className="zoom" src={item.src} />
                       </CarouselItem>
                     );
                   })}

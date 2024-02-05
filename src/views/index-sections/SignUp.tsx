@@ -26,6 +26,7 @@ const SignUp = () => {
     <>
       <div
         className="section section-signup"
+        id="contacto"
         style={{
           backgroundImage: "url(" + bg11 + ")",
           backgroundSize: "cover",

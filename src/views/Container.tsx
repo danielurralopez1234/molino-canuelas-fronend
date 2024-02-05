@@ -7,6 +7,8 @@ import {
 } from "./index-sections";
 
 import "./../assets/css/whatsapp.css"
+import QuienesSomos from "../components/QuienesSomos/QuienesSomos";
+import TrayectoriaYCrecimiento from "../components/TrayectoriaYCrecimiento/TrayectoriaYCrecimiento";
 
 
 const Container = () => {
@@ -30,7 +32,12 @@ const Container = () => {
         <IndexHeader />
         <div className="main">
           <Productos />
+          <QuienesSomos/>
+          <TrayectoriaYCrecimiento/>
+
+
           <SignUp />
+
           <Download />
         </div>
         <a href="https://wa.me/56987587393" target="_blank" className="whatsapp-btn">
