@@ -2,8 +2,8 @@ import { FC } from "react";
 import { ModalBody, Modal } from "reactstrap";
 
 //image
-import imgClose from "./../../../assets/img/close_icon.svg"
-import "./quienesSomosModal.css"
+import imgClose from "./../../../assets/img/close_icon.svg";
+import "./quienesSomosModal.css";
 
 interface IProps {
   isVisible: boolean;
@@ -22,9 +22,7 @@ const QuienesSomosModal = (props: IProps): ReturnType<FC> => {
             type="button"
             onClick={() => setIsVisible(false)}
           >
-            <img className="image-close"
-            src={imgClose}
-            />
+            <img className="image-close" src={imgClose} />
           </button>
           <h4 className="title title-up">Modal title</h4>
         </div>
@@ -38,11 +36,10 @@ const QuienesSomosModal = (props: IProps): ReturnType<FC> => {
             country, in which roasted parts of sentences fly into your mouth.
           </p>
         </ModalBody>
-        <div className="modal-footer">
-        </div>
+        <div className="modal-footer"></div>
       </Modal>
     </>
   );
-}
+};
 
 export default QuienesSomosModal;
