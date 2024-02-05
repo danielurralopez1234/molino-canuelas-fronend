@@ -1,5 +1,16 @@
-import { FC } from "react";
-import { ModalBody, Modal } from "reactstrap";
+import { FC, useState } from "react";
+import {
+  ModalBody,
+  Modal,
+  Card,
+  CardHeader,
+  Nav,
+  NavItem,
+  NavLink,
+  CardBody,
+  TabContent,
+  TabPane,
+} from "reactstrap";
 
 //image
 import imgClose from "./../../../assets/img/close_icon.svg";
@@ -13,6 +24,9 @@ interface IProps {
 const QuienesSomosModal = (props: IProps): ReturnType<FC> => {
   const { isVisible, setIsVisible } = props;
 
+  const [iconPills, setIconPills] = useState("1");
+  const [pills, setPills] = useState("1");
+
   return (
     <>
       <Modal isOpen={isVisible} toggle={() => setIsVisible(false)}>
@@ -24,17 +38,90 @@ const QuienesSomosModal = (props: IProps): ReturnType<FC> => {
           >
             <img className="image-close" src={imgClose} />
           </button>
-          <h4 className="title title-up">Modal title</h4>
+          <br />
         </div>
         <ModalBody>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean. A small river named Duden flows by their place and
-            supplies it with the necessary regelialia. It is a paradisematic
-            country, in which roasted parts of sentences fly into your mouth.
+          <p className="blockquote blockquote-primary blockquote-style">
+            Promovemos el trabajo en equipo, brindamos soluciones a medida
+            acordes a las exigencias del mercado, trabajamos con un sistema de
+            gestión basado en la calidad total y mejora contínua de los procesos
+            para garantizar productos y servicios de excelencia.
           </p>
+          <Card>
+            <CardHeader>
+              <Nav className="justify-content-center" role="tablist" tabs>
+                <NavItem>
+                  <NavLink
+                    className={iconPills === "1" ? "active" : ""}
+                    href="#pablo"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIconPills("1");
+                    }}
+                  >
+                    Misión
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    className={iconPills === "2" ? "active" : ""}
+                    href="#pablo"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIconPills("2");
+                    }}
+                  >
+                    Visión
+                  </NavLink>
+                </NavItem>
+                <NavItem>
+                  <NavLink
+                    className={iconPills === "3" ? "active" : ""}
+                    href="#pablo"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setIconPills("3");
+                    }}
+                  >
+                    Valores
+                  </NavLink>
+                </NavItem>
+              </Nav>
+            </CardHeader>
+            <CardBody>
+              <TabContent
+                className="text-center"
+                activeTab={"iconPills" + iconPills}
+              >
+                <TabPane tabId="iconPills1">
+                  <p>
+                    Existimos para servir y satisfacer permanentemente al
+                    mercado nacional, identificando sus necesidades actuales y
+                    futuras, comprometiéndonos en la mejora continua de nuestros
+                    procesos orientados a la demanda de nuestros clientes.
+                  </p>
+                </TabPane>
+                <TabPane tabId="iconPills2">
+                  <p>
+                    Transformarnos en la mayor proveedora de servicios harinera
+                    para los sectores, actuando sobre la base de nuestros
+                    valores organizacionales.
+                  </p>
+                </TabPane>
+                <TabPane tabId="iconPills3">
+                  <p>
+                    Una Organización flexible, eficiente, descentralizada, con
+                    pocos niveles jerárquicos, que promueva el trabajo en
+                    equipo, la innovación, la delegación de funciones, la
+                    iniciativa personal y la comunicación fluida y abierta. Se
+                    ocupa de satisfacer al cliente pequeña empresa, como al
+                    cliente gran empresa, sin olvidar los conceptos de servicio
+                    integral a todos sin discriminaciones.
+                  </p>
+                </TabPane>
+              </TabContent>
+            </CardBody>
+          </Card>
         </ModalBody>
         <div className="modal-footer"></div>
       </Modal>
