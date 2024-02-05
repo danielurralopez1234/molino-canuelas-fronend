@@ -3,6 +3,7 @@ import { ModalBody, Modal } from "reactstrap";
 
 //image
 import imgClose from "./../../../assets/img/close_icon.svg";
+import mapaChileMarcas from "./../../../assets/img/mapa_chile_marcas.png";
 import "./trayectoriaYCrecimientosModal.css";
 
 interface IProps {
@@ -24,16 +25,25 @@ const TrayectoriaYCrecimientoModal = (props: IProps): ReturnType<FC> => {
           >
             <img className="image-close" src={imgClose} />
           </button>
-          <h4 className="title title-up">Modal title</h4>
+          <br />
         </div>
         <ModalBody>
-          <p>
-            Far far away, behind the word mountains, far from the countries
-            Vokalia and Consonantia, there live the blind texts. Separated they
-            live in Bookmarksgrove right at the coast of the Semantics, a large
-            language ocean. A small river named Duden flows by their place and
-            supplies it with the necessary regelialia. It is a paradisematic
-            country, in which roasted parts of sentences fly into your mouth.
+          <p className="blockquote blockquote-primary blockquote-style">
+            Promovemos el trabajo en equipo, brindamos soluciones a medida
+            acordes a las exigencias del mercado, trabajamos con un sistema de
+            gestión basado en la calidad total y mejora contínua de los procesos
+            para garantizar productos y servicios de excelencia.
+            <br />
+            <br />
+            La compañía se consolidó en un grupo industrial que se especializa
+            en la elaboración de harinas y otros productos a la mesa del
+            consumidor final.
+            <br />
+            <br />
+            <img
+            src={mapaChileMarcas}
+            />
+
           </p>
         </ModalBody>
         <div className="modal-footer"></div>
