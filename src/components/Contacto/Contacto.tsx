@@ -59,7 +59,7 @@ const Contacto = () => {
                         target="_blank"
                         size="lg"
                       >
-                        <i className="fab fa-whatsapp"></i>
+                        <i className="fab fa-whatsapp whatsapp-style"></i>
                       </Button>
                       <Button
                         className="btn-neutral btn-icon btn-round"
@@ -85,6 +85,7 @@ const Contacto = () => {
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
                       ></Input>
+                      
                     </InputGroup>
                     <InputGroup
                       className={
