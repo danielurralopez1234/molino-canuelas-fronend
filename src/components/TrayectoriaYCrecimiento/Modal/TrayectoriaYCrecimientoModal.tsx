@@ -4,6 +4,7 @@ import { ModalBody, Modal } from "reactstrap";
 //image
 import imgClose from "./../../../assets/img/close_icon.svg";
 import mapaChileMarcas from "./../../../assets/img/mapa_chile_marcas.png";
+import trayectoriaServicioModal from "./../../../assets/img/trayectoria_servicios_modal.png"
 import "./trayectoriaYCrecimientosModal.css";
 
 interface IProps {
@@ -25,7 +26,9 @@ const TrayectoriaYCrecimientoModal = (props: IProps): ReturnType<FC> => {
           >
             <img className="image-close" src={imgClose} />
           </button>
-          <br />
+          <img
+          src={trayectoriaServicioModal}
+          />
         </div>
         <ModalBody>
           <p className="blockquote blockquote-primary blockquote-style">

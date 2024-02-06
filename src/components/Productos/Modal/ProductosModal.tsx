@@ -4,6 +4,7 @@ import { ModalBody, Modal } from "reactstrap";
 //image
 import imgClose from "./../../../assets/img/close_icon.svg";
 import infoNutricional from "./../../../assets/img/info_nutri.png";
+import productosModal from "./../../../assets/img/productos_modal.png"
 import "./productosModal.css";
 
 interface IProps {
@@ -25,7 +26,8 @@ const ProductosModal = (props: IProps): ReturnType<FC> => {
           >
             <img className="image-close" src={imgClose} />
           </button>
-          <br />
+          {/* <br /> */}
+          <img src={productosModal}/>
         </div>
         <ModalBody>
           <p className="blockquote blockquote-primary blockquote-style">

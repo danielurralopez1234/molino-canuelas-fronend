@@ -14,6 +14,7 @@ import {
 
 //image
 import imgClose from "./../../../assets/img/close_icon.svg";
+import quienesSomosModal from "./../../../assets/img/quienes_samos_modal.png"
 import "./quienesSomosModal.css";
 
 interface IProps {
@@ -25,7 +26,6 @@ const QuienesSomosModal = (props: IProps): ReturnType<FC> => {
   const { isVisible, setIsVisible } = props;
 
   const [iconPills, setIconPills] = useState("1");
-  const [pills, setPills] = useState("1");
 
   return (
     <>
@@ -38,7 +38,10 @@ const QuienesSomosModal = (props: IProps): ReturnType<FC> => {
           >
             <img className="image-close" src={imgClose} />
           </button>
-          <br />
+          {/* <br /> */}
+          <img
+          src={quienesSomosModal}
+          />
         </div>
         <ModalBody>
           <p className="blockquote blockquote-primary blockquote-style">
