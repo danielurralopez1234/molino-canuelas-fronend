@@ -18,3 +18,7 @@
     color: white !important;
     background-color: #e99e2c !important;
 }
+
+.text-font-bold {
+    font-weight: bold;
+}

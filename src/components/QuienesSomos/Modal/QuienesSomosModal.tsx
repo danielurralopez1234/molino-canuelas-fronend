@@ -42,10 +42,10 @@ const QuienesSomosModal = (props: IProps): ReturnType<FC> => {
         </div>
         <ModalBody>
           <p className="blockquote blockquote-primary blockquote-style">
-            Promovemos el trabajo en equipo, brindamos soluciones a medida
+             <strong className="text-font-bold">Promovemos el trabajo en equipo, brindamos soluciones a medida
             acordes a las exigencias del mercado, trabajamos con un sistema de
             gestión basado en la calidad total y mejora contínua de los procesos
-            para garantizar productos y servicios de excelencia.
+            para garantizar productos y servicios de excelencia.</strong>
           </p>
           <Card>
             <CardHeader>
@@ -94,7 +94,7 @@ const QuienesSomosModal = (props: IProps): ReturnType<FC> => {
                 activeTab={"iconPills" + iconPills}
               >
                 <TabPane tabId="iconPills1">
-                  <p>
+                  <p className="blockquote blockquote-primary blockquote-style">
                     Existimos para servir y satisfacer permanentemente al
                     mercado nacional, identificando sus necesidades actuales y
                     futuras, comprometiéndonos en la mejora continua de nuestros
@@ -102,14 +102,14 @@ const QuienesSomosModal = (props: IProps): ReturnType<FC> => {
                   </p>
                 </TabPane>
                 <TabPane tabId="iconPills2">
-                  <p>
+                  <p className="blockquote blockquote-primary blockquote-style">
                     Transformarnos en la mayor proveedora de servicios harinera
                     para los sectores, actuando sobre la base de nuestros
                     valores organizacionales.
                   </p>
                 </TabPane>
                 <TabPane tabId="iconPills3">
-                  <p>
+                  <p className="blockquote blockquote-primary blockquote-style">
                     Una Organización flexible, eficiente, descentralizada, con
                     pocos niveles jerárquicos, que promueva el trabajo en
                     equipo, la innovación, la delegación de funciones, la

@@ -29,7 +29,7 @@ const ProductosModal = (props: IProps): ReturnType<FC> => {
         </div>
         <ModalBody>
           <p className="blockquote blockquote-primary blockquote-style">
-            La harina Adelia María 000 se utiliza siempre en la elaboración de
+            <strong className="text-font-bold">La harina Adelia María 000</strong> se utiliza siempre en la elaboración de
             panes, ya que su alto contenido de proteínas , más fibra y hierro.
             Así posibilita la formación de gluten y se consigue un buen leudado
             sin que las piezas pierdan su forma. Es más fácil de trabajar y
@@ -37,11 +37,11 @@ const ProductosModal = (props: IProps): ReturnType<FC> => {
             fermentación.
             <br />
             <br />
-            ¿Cómo saber si la harina es de buena calidad?
+            <strong className="text-font-bold">¿Cómo saber si la harina es de buena calidad?</strong>
             <br />
             <br />
-            Una harina es considerada de buena calidad para panificación es
-            cuando tiene una W 140-160, y P/L 0,5- 0,6. Para productos de horno
+            <strong className="text-font-bold">Una harina es considerada de buena calidad para panificación es
+            cuando tiene una W 140-160, y P/L 0,5- 0,6.</strong> Para productos de horno
             fermentados, se debe utilizar harinas fuertes con una W 180-200.
             <br />
             <br />

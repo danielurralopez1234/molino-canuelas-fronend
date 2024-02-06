@@ -142,64 +142,35 @@ const Contacto = () => {
                 className="blockquote blockquote-primary blockquote-style"
                 style={{ textAlign: "left" }}
               >
-                <strong>Horario de Atención:</strong>
+                <strong className="text-font-bold">Horario de Atención:</strong>
                 <br /> Lunes a viernes: de 08:00 a 18:00 hrs
                 <br /> Sábado de 08:00 a 14:00 hrs
                 <br />
                 <br />
-                <strong>Teléfono:</strong>
+                <strong className="text-font-bold">Teléfono:</strong>
                 <br /> +56 9 8758 7393
                 <br />
                 <br />
-                Dirección: <br />
-                San Agustín #1350, Cúrico (Casa matriz, Región del Maule)
-                {/* <iframe
+                <strong className="text-font-bold">Dirección:</strong> <br />
+                San Agustín #1350, Cúrico (<strong className="text-font-bold">Casa matriz, Región del Maule</strong>)
+                <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.6511127625117!2d-71.25693452351543!3d-34.9904027780239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9664571af6cf72cb%3A0xb03e3b954ba6b38e!2sSan%20Agust%C3%ADn%201350%2C%203342083%20Curic%C3%B3%2C%20Maule!5e0!3m2!1sen!2scl!4v1707160376463!5m2!1sen!2scl"
                   width="400"
                   height="300"
                   style={{ border: "0" }}
                   loading="lazy"
-                ></iframe> */}
+                ></iframe>
                 <br />
-                San Juan #4705, San Joaquín (Región Metropolitana
-                {/* <iframe
+                San Juan #4705, San Joaquín (<strong className="text-font-bold">Región Metropolitana</strong>)
+                <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1300491612615!2d-70.62325751198661!3d-33.4979934312745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00908a63b5b%3A0x32dfa2cb62faaa98!2sSan%20Juan%204705%2C%20San%20Joaqu%C3%ADn%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1707160546069!5m2!1sen!2scl"
                   width="400"
                   height="300"
                   style={{ border: "0" }}
                   loading="lazy"
-                ></iframe> */}
+                ></iframe>
               </p>
             </Col>
-          </Row>
-          <Row>
-          <p
-                className="blockquote blockquote-primary blockquote-style"
-                style={{ textAlign: "left" }}
-              >
-                Mapa: <br />
-                <div>
-                San Agustín #1350, Cúrico (Casa matriz, Región del Maule)
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.6511127625117!2d-71.25693452351543!3d-34.9904027780239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9664571af6cf72cb%3A0xb03e3b954ba6b38e!2sSan%20Agust%C3%ADn%201350%2C%203342083%20Curic%C3%B3%2C%20Maule!5e0!3m2!1sen!2scl!4v1707160376463!5m2!1sen!2scl"
-                  width="400"
-                  height="300"
-                  style={{ border: "0" }}
-                  loading="lazy"
-                ></iframe>
-                </div>
-                <br />
-                <div>
-                San Juan #4705, San Joaquín (Región Metropolitana
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1300491612615!2d-70.62325751198661!3d-33.4979934312745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00908a63b5b%3A0x32dfa2cb62faaa98!2sSan%20Juan%204705%2C%20San%20Joaqu%C3%ADn%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1707160546069!5m2!1sen!2scl"
-                  width="400"
-                  height="300"
-                  style={{ border: "0" }}
-                  loading="lazy"
-                ></iframe>
-                </div>
-              </p>
           </Row>
         </Container>
       </div>

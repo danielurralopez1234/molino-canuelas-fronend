@@ -29,10 +29,8 @@ const TrayectoriaYCrecimientoModal = (props: IProps): ReturnType<FC> => {
         </div>
         <ModalBody>
           <p className="blockquote blockquote-primary blockquote-style">
-            Promovemos el trabajo en equipo, brindamos soluciones a medida
-            acordes a las exigencias del mercado, trabajamos con un sistema de
-            gestión basado en la calidad total y mejora contínua de los procesos
-            para garantizar productos y servicios de excelencia.
+            <strong className="text-font-bold">HOY MOLINO CAÑUELAS CHILE con su primer producto de innovación en
+            HARINA ADELIA MARIA 000</strong>
             <br />
             <br />
             La compañía se consolidó en un grupo industrial que se especializa
@@ -40,10 +38,7 @@ const TrayectoriaYCrecimientoModal = (props: IProps): ReturnType<FC> => {
             consumidor final.
             <br />
             <br />
-            <img
-            src={mapaChileMarcas}
-            />
-
+            <img src={mapaChileMarcas} />
           </p>
         </ModalBody>
         <div className="modal-footer"></div>
