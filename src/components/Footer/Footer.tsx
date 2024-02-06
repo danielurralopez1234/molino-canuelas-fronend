@@ -1,6 +1,6 @@
 import {  Container, Row, Col } from "reactstrap";
 
-const  Download = () => {
+const  Footer = () => {
   return (
     <>
       <div
@@ -36,4 +36,4 @@ const  Download = () => {
   );
 }
 
-export default Download;
+export default Footer;
