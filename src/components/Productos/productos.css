@@ -44,3 +44,8 @@ element.style {
     width: 100%;
   }
 }
+@media screen and (max-width: 390px) {
+  .section-style{
+    width: 100% !important;
+  }
+}

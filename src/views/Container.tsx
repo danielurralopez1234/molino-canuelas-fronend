@@ -2,8 +2,8 @@ import { useEffect } from "react";
 import { IndexHeader, IndexNavbar } from '../components'
 import {
   Productos,
-  SignUp,
-  Download
+  Download,
+  Contacto
 } from "./index-sections";
 
 import "./../assets/css/whatsapp.css"
@@ -34,9 +34,7 @@ const Container = () => {
           <Productos />
           <QuienesSomos/>
           <TrayectoriaYCrecimiento/>
-
-
-          <SignUp />
+          <Contacto />
 
           <Download />
         </div>

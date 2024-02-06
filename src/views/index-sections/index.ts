@@ -9,6 +9,6 @@ export { default as Javascript } from "./Javascript";
 export { default as Examples } from "./Examples";
 export { default as Download } from "./Download";
 export { default as Navbars } from "./Navbars";
-export { default as SignUp } from "./SignUp";
+export { default as Contacto } from "../../components/Contacto/Contacto";
 export { default as Productos } from "../../components/Productos/Productos";
 export { default as Tabs } from "./Tabs";

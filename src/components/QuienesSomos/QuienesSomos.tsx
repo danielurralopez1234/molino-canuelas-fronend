@@ -82,7 +82,7 @@ const QuienesSomos = () => {
               </Button>
             </Col>
             <div
-              className="section"
+              className="section section-style"
               id="carousel"
               style={{ backgroundColor: "#fff", width: "50%" }}
             >

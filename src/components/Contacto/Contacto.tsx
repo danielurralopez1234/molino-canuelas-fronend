@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   Button,
   Card,
-  CardHeader,
   CardBody,
   CardFooter,
   CardTitle,
@@ -14,9 +13,9 @@ import {
   Col,
 } from "reactstrap";
 
-import bg11 from "./../../assets/img/carrusel_img_traye_3.png";
+import "./contacto.css";
 
-const SignUp = () => {
+const Contacto = () => {
   const [firstFocus, setFirstFocus] = useState(false);
   const [lastFocus, setLastFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
@@ -26,7 +25,6 @@ const SignUp = () => {
         className="section section-signup"
         id="contacto"
         style={{
-          // backgroundImage: "url(" + bg11 + ")",
           backgroundSize: "cover",
           backgroundPosition: "top center",
           minHeight: "700px",
@@ -35,9 +33,13 @@ const SignUp = () => {
         <Container>
           <Row>
             <Col>
-              <Card className="card-signup" data-background-color="blue">
-                <Form action="" className="form" method="">
-                  <CardHeader className="text-center">
+              <Card
+                className="card-signup card-signup-style"
+                data-background-color="blue"
+              >
+                <Form action="" className="form form-style" method="">
+                  {/* <CardHeader className=""> */}
+                  <div className="Card-Header-style text-center">
                     <CardTitle className="title-up" tag="h3">
                       Contáctanos
                     </CardTitle>
@@ -68,7 +70,9 @@ const SignUp = () => {
                         <i className="fab fa-instagram"></i>
                       </Button>
                     </div>
-                  </CardHeader>
+                  </div>
+                  {/* </CardHeader> */}
+
                   <CardBody>
                     <InputGroup
                       className={
@@ -119,9 +123,9 @@ const SignUp = () => {
                       ></Input>
                     </InputGroup>
                   </CardBody>
-                  <CardFooter className="text-center">
+                  <CardFooter className="text-center card-footer-style">
                     <Button
-                      className="btn-neutral btn-round"
+                      className="btn-neutral btn-round contacto-btn-style"
                       color="info"
                       href="#"
                       onClick={(e) => e.preventDefault()}
@@ -143,28 +147,59 @@ const SignUp = () => {
                 <br /> Sábado de 08:00 a 14:00 hrs
                 <br />
                 <br />
-                <div>
-                  Dirección: <br />
-                  San Agustín #1350, Cúrico (Casa matriz, Región del Maule)
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.6511127625117!2d-71.25693452351543!3d-34.9904027780239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9664571af6cf72cb%3A0xb03e3b954ba6b38e!2sSan%20Agust%C3%ADn%201350%2C%203342083%20Curic%C3%B3%2C%20Maule!5e0!3m2!1sen!2scl!4v1707160376463!5m2!1sen!2scl"
-                    width="400"
-                    height="300"
-                    style={{ border: "0" }}
-                    loading="lazy"
-                  ></iframe>
-                  <br />
-                  San Juan #4705, San Joaquín (Región Metropolitana
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1300491612615!2d-70.62325751198661!3d-33.4979934312745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00908a63b5b%3A0x32dfa2cb62faaa98!2sSan%20Juan%204705%2C%20San%20Joaqu%C3%ADn%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1707160546069!5m2!1sen!2scl"
-                    width="400"
-                    height="300"
-                    style={{ border: "0" }}
-                    loading="lazy"
-                  ></iframe>
-                </div>
+                <strong>Teléfono:</strong>
+                <br /> +56 9 8758 7393
+                <br />
+                <br />
+                Dirección: <br />
+                San Agustín #1350, Cúrico (Casa matriz, Región del Maule)
+                {/* <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.6511127625117!2d-71.25693452351543!3d-34.9904027780239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9664571af6cf72cb%3A0xb03e3b954ba6b38e!2sSan%20Agust%C3%ADn%201350%2C%203342083%20Curic%C3%B3%2C%20Maule!5e0!3m2!1sen!2scl!4v1707160376463!5m2!1sen!2scl"
+                  width="400"
+                  height="300"
+                  style={{ border: "0" }}
+                  loading="lazy"
+                ></iframe> */}
+                <br />
+                San Juan #4705, San Joaquín (Región Metropolitana
+                {/* <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1300491612615!2d-70.62325751198661!3d-33.4979934312745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00908a63b5b%3A0x32dfa2cb62faaa98!2sSan%20Juan%204705%2C%20San%20Joaqu%C3%ADn%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1707160546069!5m2!1sen!2scl"
+                  width="400"
+                  height="300"
+                  style={{ border: "0" }}
+                  loading="lazy"
+                ></iframe> */}
               </p>
             </Col>
+          </Row>
+          <Row>
+          <p
+                className="blockquote blockquote-primary blockquote-style"
+                style={{ textAlign: "left" }}
+              >
+                Mapa: <br />
+                <div>
+                San Agustín #1350, Cúrico (Casa matriz, Región del Maule)
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.6511127625117!2d-71.25693452351543!3d-34.9904027780239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9664571af6cf72cb%3A0xb03e3b954ba6b38e!2sSan%20Agust%C3%ADn%201350%2C%203342083%20Curic%C3%B3%2C%20Maule!5e0!3m2!1sen!2scl!4v1707160376463!5m2!1sen!2scl"
+                  width="400"
+                  height="300"
+                  style={{ border: "0" }}
+                  loading="lazy"
+                ></iframe>
+                </div>
+                <br />
+                <div>
+                San Juan #4705, San Joaquín (Región Metropolitana
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1300491612615!2d-70.62325751198661!3d-33.4979934312745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00908a63b5b%3A0x32dfa2cb62faaa98!2sSan%20Juan%204705%2C%20San%20Joaqu%C3%ADn%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1707160546069!5m2!1sen!2scl"
+                  width="400"
+                  height="300"
+                  style={{ border: "0" }}
+                  loading="lazy"
+                ></iframe>
+                </div>
+              </p>
           </Row>
         </Container>
       </div>
@@ -172,4 +207,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Contacto;
