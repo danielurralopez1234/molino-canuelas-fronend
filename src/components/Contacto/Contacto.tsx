@@ -24,6 +24,33 @@ const Contacto = () => {
   const [firstFocus, setFirstFocus] = useState(false);
   const [lastFocus, setLastFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
+
+  const [nombreCompleto, setNombreCompleto] = useState('');
+  const [telefono, setTelefono] = useState('');
+  const [email, setEmail] = useState('');
+  const [mensaje, setMensaje] = useState('');
+
+
+  const onCLickSendToMessage = () => {
+    const remitente = 'ventas@molinocanuelaschile.cl';
+    const destinatario = email;
+    const texto = mensaje;
+
+    const url = `https://s86cyb2go1.execute-api.us-east-1.amazonaws.com/dev/sendEmail?remitente=${remitente}&destinatario=${destinatario}&texto=${texto}&fono=${telefono}`;
+
+    fetch(url)
+      .then(response => {
+        if (!response.ok) {
+          console.error('Hubo un problema al enviar el correo.');
+        }
+        alert('Correo enviado correctamente');
+      })
+      .catch(error => {
+        console.error('Error al enviar el correo:', error);
+      });
+  }
+
+
   return (
     <>
       <div
@@ -88,6 +115,8 @@ const Contacto = () => {
                       <Input
                         placeholder="Nombre Completo..."
                         type="text"
+                        value={nombreCompleto}
+                        onChange={(e) => setNombreCompleto(e.target.value)}
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
                       ></Input>
@@ -100,6 +129,8 @@ const Contacto = () => {
                       <Input
                         placeholder="Telefono..."
                         type="text"
+                        value={telefono}
+                        onChange={(e) => setTelefono(e.target.value)}
                         onFocus={() => setLastFocus(true)}
                         onBlur={() => setLastFocus(false)}
                       ></Input>
@@ -112,6 +143,8 @@ const Contacto = () => {
                       <Input
                         placeholder="Email..."
                         type="text"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
                         onFocus={() => setEmailFocus(true)}
                         onBlur={() => setEmailFocus(false)}
                       ></Input>
@@ -124,6 +157,8 @@ const Contacto = () => {
                       <Input
                         placeholder="Mensaje..."
                         type="textarea"
+                        value={mensaje}
+                        onChange={(e) => setMensaje(e.target.value)}
                         onFocus={() => setEmailFocus(true)}
                         onBlur={() => setEmailFocus(false)}
                       ></Input>
@@ -134,7 +169,7 @@ const Contacto = () => {
                       className="btn-neutral btn-round contacto-btn-style"
                       color="info"
                       href="#"
-                      onClick={(e) => e.preventDefault()}
+                      onClick={() => onCLickSendToMessage()}
                       size="lg"
                     >
                       Enviar
