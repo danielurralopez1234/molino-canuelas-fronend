@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Button,
   Card,
@@ -12,6 +12,11 @@ import {
   Row,
   Col,
 } from "reactstrap";
+import {
+  loadCaptchaEnginge,
+  LoadCanvasTemplateNoReload,
+  validateCaptcha,
+} from "react-simple-captcha";
 
 import "./contacto.css";
 
@@ -34,20 +39,101 @@ const Contacto = () => {
     const remitente = "ventas@molinocanuelaschile.cl";
     const destinatario = email;
     const texto = mensaje;
+    const fono = telefono;
+    const nombre = nombreCompleto;
 
-    const url = `https://s86cyb2go1.execute-api.us-east-1.amazonaws.com/dev/sendEmail?remitente=${remitente}&destinatario=${destinatario}&texto=${texto}&fono=${telefono}`;
+    const isFonoValida = isFono(fono);
+    const isEmailValida = isEmail(destinatario);
+    const isNombreValida = isNombre(nombre);
+    const isTextoValida = isTexto(texto);
 
-    fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          console.error("Hubo un problema al enviar el correo.");
-        }
-        alert("Correo enviado correctamente");
-      })
-      .catch((error) => {
-        console.error("Error al enviar el correo:", error);
-      });
+    let user_captcha_value = (
+      document.getElementById("user_captcha_input") as HTMLInputElement
+    ).value;
+    const validaiconCaptcha = validateCaptcha(user_captcha_value);
+
+    if (
+      isFonoValida &&
+      isEmailValida &&
+      isNombreValida &&
+      isTextoValida &&
+      validaiconCaptcha
+    ) {
+      alert("paso");
+
+      // const url = `https://s86cyb2go1.execute-api.us-east-1.amazonaws.com/dev/sendEmail?remitente=${remitente}&destinatario=${destinatario}&texto=${texto}&fono=${fono}`;
+
+      // fetch(url)
+      //   .then((response) => {
+      //     if (!response.ok) {
+      //       console.error("Hubo un problema al enviar el correo.");
+      //     }
+      //     alert("Correo enviado correctamente");
+      //   })
+      //   .catch((error) => {
+      //     console.error("Error al enviar el correo:", error);
+      //   });
+    } else {
+      let mensaje = "";
+      if (isFonoValida === false) {
+        mensaje +=
+          "Telefono no cumple con el formato ejemplo: '56226904422 o Celular 56987587393'\n";
+      }
+      if (isEmailValida === false) {
+        mensaje += "Email no cumple con el formato ejemplo: 'jose@gmail.com'\n";
+      }
+      if (isNombreValida === false) {
+        mensaje +=
+          "Nombre no cumple con el formato ejemplo: 'Juan Andres Soto Lara'\n";
+      }
+      if (isTextoValida === false) {
+        mensaje +=
+          "Mensaje no cumple con el formato ejemplo: 'Me gustaria contactarlos para ...' \n";
+      }
+      if (validaiconCaptcha === false) {
+        mensaje += "'Captcha no valido' \n";
+      }
+      alert(mensaje);
+    }
   };
+
+  const isFono = (val: string) => {
+    if (val.trim() !== "") {
+      if (val.length === 11) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  const isEmail = (val: string) => {
+    if (val.trim() !== "") {
+      const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return pattern.test(val);
+    }
+    return false;
+  };
+
+  const isNombre = (val: string) => {
+    if (val.trim() !== "") {
+      if (val.length > 3) {
+        return true;
+      }
+    }
+    return false;
+  };
+
+  const isTexto = (val: string) => {
+    if (val.trim() !== "") {
+      if (val.length > 3) {
+        return true;
+      }
+    }
+    return false;
+  };
+  useEffect(() => {
+    loadCaptchaEnginge(6);
+  }, []);
 
   return (
     <>
@@ -126,7 +212,7 @@ const Contacto = () => {
                     >
                       <Input
                         placeholder="Telefono..."
-                        type="text"
+                        type="number"
                         value={telefono}
                         onChange={(e) => setTelefono(e.target.value)}
                         onFocus={() => setLastFocus(true)}
@@ -161,12 +247,19 @@ const Contacto = () => {
                         onBlur={() => setEmailFocus(false)}
                       ></Input>
                     </InputGroup>
+                    <LoadCanvasTemplateNoReload />
+                    <Input
+                      placeholder="Escriba el Captcha."
+                      type="text"
+                      id="user_captcha_input"
+                      style={{ backgroundColor: "#bd7f3e" }}
+                    ></Input>
                   </CardBody>
                   <CardFooter className="text-center card-footer-style">
                     <Button
                       className="btn-neutral btn-round contacto-btn-style"
                       color="info"
-                      href="#"
+                      // href="#"
                       onClick={() => onCLickSendToMessage()}
                       size="lg"
                     >
