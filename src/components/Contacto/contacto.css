@@ -23,6 +23,19 @@
     font-weight: bold;
 }
 
-.whatsapp-style{
+.whatsapp-style {
     color: green;
+}
+
+.img-Contacto {
+    width: 27%;
+}
+
+@media screen and (max-width: 390px) {
+    .img-Contacto {
+        width: 60% !important;
+    }
+    .blockquote-style{
+        margin-top: 10%;
+    }
 }

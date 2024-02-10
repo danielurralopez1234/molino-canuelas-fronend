@@ -51,7 +51,7 @@ const IndexHeader = () => {
   ];
 
   return (
-    <div className="page-header clear-filter" id="inicio">
+    <div className="page-header clear-filter clear-filter-style" id="inicio">
       <Container className="principal-container">
         <Row>
           <div className="container-element">

@@ -25,31 +25,29 @@ const Contacto = () => {
   const [lastFocus, setLastFocus] = useState(false);
   const [emailFocus, setEmailFocus] = useState(false);
 
-  const [nombreCompleto, setNombreCompleto] = useState('');
-  const [telefono, setTelefono] = useState('');
-  const [email, setEmail] = useState('');
-  const [mensaje, setMensaje] = useState('');
-
+  const [nombreCompleto, setNombreCompleto] = useState("");
+  const [telefono, setTelefono] = useState("");
+  const [email, setEmail] = useState("");
+  const [mensaje, setMensaje] = useState("");
 
   const onCLickSendToMessage = () => {
-    const remitente = 'ventas@molinocanuelaschile.cl';
+    const remitente = "ventas@molinocanuelaschile.cl";
     const destinatario = email;
     const texto = mensaje;
 
     const url = `https://s86cyb2go1.execute-api.us-east-1.amazonaws.com/dev/sendEmail?remitente=${remitente}&destinatario=${destinatario}&texto=${texto}&fono=${telefono}`;
 
     fetch(url)
-      .then(response => {
+      .then((response) => {
         if (!response.ok) {
-          console.error('Hubo un problema al enviar el correo.');
+          console.error("Hubo un problema al enviar el correo.");
         }
-        alert('Correo enviado correctamente');
+        alert("Correo enviado correctamente");
       })
-      .catch(error => {
-        console.error('Error al enviar el correo:', error);
+      .catch((error) => {
+        console.error("Error al enviar el correo:", error);
       });
-  }
-
+  };
 
   return (
     <>
@@ -63,7 +61,9 @@ const Contacto = () => {
         }}
       >
         <Container>
-          <img src={contactoLogo} />
+          <img className="img-Contacto" src={contactoLogo} />
+          <br />
+          <br />
           <Row>
             <Col>
               <Card
@@ -71,7 +71,6 @@ const Contacto = () => {
                 data-background-color="blue"
               >
                 <Form action="" className="form form-style" method="">
-                  {/* <CardHeader className=""> */}
                   <div className="Card-Header-style text-center">
                     <CardTitle className="title-up" tag="h3">
                       Contáctanos
@@ -104,7 +103,6 @@ const Contacto = () => {
                       </Button>
                     </div>
                   </div>
-                  {/* </CardHeader> */}
 
                   <CardBody>
                     <InputGroup
@@ -179,7 +177,7 @@ const Contacto = () => {
               </Card>
             </Col>
             <Col>
-              <p
+              <div
                 className="blockquote blockquote-primary blockquote-style"
                 style={{ textAlign: "center" }}
               >
@@ -207,25 +205,29 @@ const Contacto = () => {
                   Casa matriz, Región del Maule
                 </strong>
                 )
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.6511127625117!2d-71.25693452351543!3d-34.9904027780239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9664571af6cf72cb%3A0xb03e3b954ba6b38e!2sSan%20Agust%C3%ADn%201350%2C%203342083%20Curic%C3%B3%2C%20Maule!5e0!3m2!1sen!2scl!4v1707160376463!5m2!1sen!2scl"
-                  width="400"
-                  height="300"
-                  style={{ border: "0" }}
-                  loading="lazy"
-                ></iframe>
+                <div className="content-map-google">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.6511127625117!2d-71.25693452351543!3d-34.9904027780239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9664571af6cf72cb%3A0xb03e3b954ba6b38e!2sSan%20Agust%C3%ADn%201350%2C%203342083%20Curic%C3%B3%2C%20Maule!5e0!3m2!1sen!2scl!4v1707160376463!5m2!1sen!2scl"
+                    // width="400"
+                    // height="300"
+                    style={{ border: "0" }}
+                    loading="lazy"
+                  ></iframe>
+                </div>
                 <br />
                 San Juan #4705, San Joaquín (
                 <strong className="text-font-bold">Región Metropolitana</strong>
                 )
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1300491612615!2d-70.62325751198661!3d-33.4979934312745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00908a63b5b%3A0x32dfa2cb62faaa98!2sSan%20Juan%204705%2C%20San%20Joaqu%C3%ADn%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1707160546069!5m2!1sen!2scl"
-                  width="400"
-                  height="300"
-                  style={{ border: "0" }}
-                  loading="lazy"
-                ></iframe>
-              </p>
+                <div className="content-map-google">
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3327.1300491612615!2d-70.62325751198661!3d-33.4979934312745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662d00908a63b5b%3A0x32dfa2cb62faaa98!2sSan%20Juan%204705%2C%20San%20Joaqu%C3%ADn%2C%20Regi%C3%B3n%20Metropolitana!5e0!3m2!1sen!2scl!4v1707160546069!5m2!1sen!2scl"
+                    // width="400"
+                    // height="300"
+                    style={{ border: "0" }}
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
             </Col>
           </Row>
         </Container>
