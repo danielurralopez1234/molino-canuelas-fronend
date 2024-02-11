@@ -60,7 +60,7 @@ const Contacto = () => {
       validaiconCaptcha
     ) {
 
-      const url = `https://s86cyb2go1.execute-api.us-east-1.amazonaws.com/dev/sendEmail?remitente=${remitente}&destinatario=${destinatario}&texto=${texto}&fono=${fono}`;
+      const url = `https://s86cyb2go1.execute-api.us-east-1.amazonaws.com/dev/sendEmail?remitente=${remitente}&destinatario=${destinatario}&texto=${texto}&fono=${fono}&nombre=${nombre}`;
 
       fetch(url)
         .then((response) => {
@@ -72,7 +72,7 @@ const Contacto = () => {
         .catch((error) => {
           console.error("Error al enviar el correo:", error);
         });
-        
+
     } else {
       let mensaje = "";
       if (isFonoValida === false) {
