@@ -11,7 +11,7 @@ const  Footer = () => {
         <Container>
           <Row className="justify-content-md-center">
             <Col className="text-center" lg="8" md="12">
-              <h3 className="title">SITIO EN DESARROLLO</h3>
+              {/* <h3 className="title">SITIO EN DESARROLLO</h3> */}
             </Col>
             <Col className="text-center" lg="8" md="12">
 

@@ -75,7 +75,7 @@ const IndexHeader = () => {
             <div
               className="section section-style"
               id="carousel"
-              style={{ backgroundColor: "#fff", width: '50%' }}
+              style={{ backgroundColor: "#FCF9E5", width: '50%' }}
             >
               <Col lg="10"  >
                 <Carousel

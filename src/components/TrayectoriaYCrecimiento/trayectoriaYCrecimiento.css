@@ -23,6 +23,10 @@
   box-shadow: 13px 15px 13px 0px rgba(0, 0, 0, 0.493);
 }
 
+.trayectoria-style{
+  background-color: #FCF9E5;
+}
+
 element.style {
   background-color: rgb(255 255 255 / 0%);
   width: 50%;

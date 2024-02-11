@@ -53,7 +53,7 @@ const TrayectoriaYCrecimiento = () => {
   ];
 
   return (
-    <div className="page-header clear-filter" id="trayectoria-y-crecimiento">
+    <div className="page-header clear-filter trayectoria-style" id="trayectoria-y-crecimiento">
       <Container className="principal-container">
         <Row>
           <div className="container-element">
@@ -61,7 +61,7 @@ const TrayectoriaYCrecimiento = () => {
             <div
               className="section section-style"
               id="carousel"
-              style={{ backgroundColor: "#fff", width: "50%" }}
+              style={{ backgroundColor: "#FCF9E5", width: "50%" }}
             >
               <Col lg="10">
                 <Carousel

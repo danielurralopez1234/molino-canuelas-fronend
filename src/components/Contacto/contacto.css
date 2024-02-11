@@ -31,6 +31,10 @@
     width: 27%;
 }
 
+.contacto-style{
+    background-color: #FCF9E5 !important;
+}
+
 @media screen and (max-width: 390px) {
     .img-Contacto {
         width: 60% !important;

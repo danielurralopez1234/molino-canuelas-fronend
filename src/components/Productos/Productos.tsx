@@ -53,14 +53,14 @@ const Productos = () => {
   ];
 
   return (
-    <div className="page-header clear-filter" id="productos">
+    <div className="page-header clear-filter productos-style" id="productos">
       <Container className="principal-container">
         <Row>
           <div className="container-element">
             <div
               className="section section-style"
               id="carousel"
-              style={{ backgroundColor: "#fff", width: "50%" }}
+              style={{ backgroundColor: "#FCF9E5", width: "50%" }}
             >
               <Col lg="10">
                 <Carousel

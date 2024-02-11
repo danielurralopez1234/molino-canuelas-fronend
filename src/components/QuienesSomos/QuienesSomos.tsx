@@ -57,7 +57,7 @@ const QuienesSomos = () => {
   ];
 
   return (
-    <div className="page-header clear-filter" id="quienes-somos">
+    <div className="page-header clear-filter quines-somos-style" id="quienes-somos">
       <Container className="principal-container">
         <Row>
           <div className="container-element">
@@ -84,7 +84,7 @@ const QuienesSomos = () => {
             <div
               className="section section-style"
               id="carousel"
-              style={{ backgroundColor: "#fff", width: "50%" }}
+              style={{ backgroundColor: "#FCF9E5", width: "50%" }}
             >
               <Col lg="10">
                 <Carousel

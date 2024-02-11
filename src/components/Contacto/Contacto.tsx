@@ -59,20 +59,20 @@ const Contacto = () => {
       isTextoValida &&
       validaiconCaptcha
     ) {
-      alert("paso");
 
-      // const url = `https://s86cyb2go1.execute-api.us-east-1.amazonaws.com/dev/sendEmail?remitente=${remitente}&destinatario=${destinatario}&texto=${texto}&fono=${fono}`;
+      const url = `https://s86cyb2go1.execute-api.us-east-1.amazonaws.com/dev/sendEmail?remitente=${remitente}&destinatario=${destinatario}&texto=${texto}&fono=${fono}`;
 
-      // fetch(url)
-      //   .then((response) => {
-      //     if (!response.ok) {
-      //       console.error("Hubo un problema al enviar el correo.");
-      //     }
-      //     alert("Correo enviado correctamente");
-      //   })
-      //   .catch((error) => {
-      //     console.error("Error al enviar el correo:", error);
-      //   });
+      fetch(url)
+        .then((response) => {
+          if (!response.ok) {
+            console.error("Hubo un problema al enviar el correo.");
+          }
+          alert("Correo enviado correctamente");
+        })
+        .catch((error) => {
+          console.error("Error al enviar el correo:", error);
+        });
+        
     } else {
       let mensaje = "";
       if (isFonoValida === false) {
@@ -138,7 +138,7 @@ const Contacto = () => {
   return (
     <>
       <div
-        className="section section-signup"
+        className="section section-signup contacto-style"
         id="contacto"
         style={{
           backgroundSize: "cover",

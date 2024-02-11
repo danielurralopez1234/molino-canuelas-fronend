@@ -24,13 +24,14 @@
 }
 
 .clear-filter-style{
-  background-color: white;
+  background-color: #FCF9E5;
 }
 
 element.style {
   background-color: rgb(255 255 255 / 0%);
   width: 50%;
 }
+
 
 @media screen and (max-width: 768px) {
   .container-element {
