@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 function ScrollBackground() {
   useEffect(() => {
     const rootElement = document.getElementById('root') as any;
-    const svgElement = document.querySelector('#root svg') as any;
+    // const svgElement = document.querySelector('#root svg') as any;
 
     const handleScroll = () => {
       const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
