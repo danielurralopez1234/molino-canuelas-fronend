@@ -3682,7 +3682,7 @@ Created using IcoMoon - icomoon.io
 }
 .navbar .navbar-nav .nav-link:not(.btn) {
   text-transform: uppercase;
-  font-size: 0.7142em;
+  font-size: 0.8142em;
   padding: 0.5rem 0.7rem;
   line-height: 1.625rem;
 }
@@ -3754,7 +3754,7 @@ Created using IcoMoon - icomoon.io
   width: 17px;
 }
 .navbar.navbar-transparent {
-  background-color: transparent !important;
+  background-color: #192E82 !important;
   box-shadow: none;
   color: #FFFFFF;
   padding-top: 20px !important;
@@ -3788,7 +3788,7 @@ Created using IcoMoon - icomoon.io
 }
 
 .bg-info {
-  background-color: #0053978f !important;
+  background-color: #192E82 !important;
 }
 
 .bg-success {

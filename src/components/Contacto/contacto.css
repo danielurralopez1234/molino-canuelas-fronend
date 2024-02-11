@@ -1,0 +1,45 @@
+.form-style {
+    background-color: #b67128 !important;
+}
+
+.Card-Header-style {
+    background-color: #b67128 !important;
+}
+
+.card-footer-style {
+    background-color: #b67128 !important;
+}
+
+.card-signup-style {
+    background-color: #b67128 !important;
+}
+
+.contacto-btn-style {
+    color: white !important;
+    background-color: #e99e2c !important;
+}
+
+.text-font-bold {
+    font-weight: bold;
+}
+
+.whatsapp-style {
+    color: green;
+}
+
+.img-Contacto {
+    width: 27%;
+}
+
+.contacto-style{
+    background-color: #FCF9E5 !important;
+}
+
+@media screen and (max-width: 390px) {
+    .img-Contacto {
+        width: 60% !important;
+    }
+    .blockquote-style{
+        margin-top: 10%;
+    }
+}

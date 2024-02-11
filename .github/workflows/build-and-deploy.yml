@@ -28,7 +28,6 @@ jobs:
           npm ci --production
           npm install --save-dev @types/react
 
-
       - name: Build Static Website
         run: npm run build
 

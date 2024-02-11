@@ -1,0 +1,22 @@
+.image-close {
+    max-width: 5%;
+    margin-left: 97%;
+}
+
+.blockquote-style {
+    border-color: #192E82 !important;
+    color: #192E82 !important;
+}
+
+.nav-tabs>.nav-item>.nav-link {
+    background-color: transparent !important;
+    border: transparent !important;
+}
+
+.card-header {
+    background-color: #1d1e42 !important;
+}
+
+.text-font-bold {
+    font-weight: bold;
+}
