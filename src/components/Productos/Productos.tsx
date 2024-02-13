@@ -20,25 +20,36 @@ import ProcductosModal from "./Modal/ProductosModal";
 
 const Productos = () => {
   const [isVisibleModal, setIsVisibleModal] = useState<boolean>(false);
-
   const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  const onExiting = () => {
+    setAnimating(true);
+  };
+  const onExited = () => {
+    setAnimating(false);
+  };
+
   const next = () => {
+    if (animating) return;
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
 
   const previous = () => {
+    if (animating) return;
     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
 
   const goToIndex = (newIndex: any) => {
+    if (animating) return;
     setActiveIndex(newIndex);
   };
 
   const stateModalFunction = () => {
     setIsVisibleModal(!isVisibleModal);
-  }
+  };
 
   const items = [
     {
@@ -60,7 +71,7 @@ const Productos = () => {
             <div
               className="section section-style"
               id="carousel"
-              style={{ backgroundColor: "#FCF9E5", width: "50%" }}
+              style={{ backgroundColor: "white", width: "50%" }}
             >
               <Col lg="10">
                 <Carousel
@@ -75,11 +86,39 @@ const Productos = () => {
                   />
                   {items.map((item) => {
                     return (
-                      <CarouselItem  key={item.src}>
+                      <CarouselItem
+                        key={item.src}
+                        onExiting={onExiting}
+                        onExited={onExited}
+                      >
                         <img className="zoom" src={item.src} />
                       </CarouselItem>
                     );
                   })}
+                  <a
+                    className="carousel-control-prev"
+                    data-slide="prev"
+                    href="#pablo"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      previous();
+                    }}
+                    role="button"
+                  >
+                    <i className="bi bi-chevron-compact-left icon-style"></i>
+                  </a>
+                  <a
+                    className="carousel-control-next"
+                    data-slide="next"
+                    href="#pablo"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      next();
+                    }}
+                    role="button"
+                  >
+                    <i className="bi bi-chevron-right icon-style"></i>
+                  </a>
                 </Carousel>
               </Col>
             </div>
@@ -107,7 +146,10 @@ const Productos = () => {
           </div>
         </Row>
       </Container>
-      <ProcductosModal isVisible={isVisibleModal} setIsVisible={setIsVisibleModal} />
+      <ProcductosModal
+        isVisible={isVisibleModal}
+        setIsVisible={setIsVisibleModal}
+      />
     </div>
   );
 };

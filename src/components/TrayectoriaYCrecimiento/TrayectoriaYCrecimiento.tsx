@@ -20,19 +20,30 @@ import TrayectoriaYCrecimientoModal from "./Modal/TrayectoriaYCrecimientoModal";
 
 const TrayectoriaYCrecimiento = () => {
   const [isVisibleModal, setIsVisibleModal] = useState<boolean>(false);
-
   const [activeIndex, setActiveIndex] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  const onExiting = () => {
+    setAnimating(true);
+  };
+  const onExited = () => {
+    setAnimating(false);
+  };
+
   const next = () => {
+    if (animating) return;
     const nextIndex = activeIndex === items.length - 1 ? 0 : activeIndex + 1;
     setActiveIndex(nextIndex);
   };
 
   const previous = () => {
+    if (animating) return;
     const nextIndex = activeIndex === 0 ? items.length - 1 : activeIndex - 1;
     setActiveIndex(nextIndex);
   };
 
   const goToIndex = (newIndex: any) => {
+    if (animating) return;
     setActiveIndex(newIndex);
   };
 
@@ -53,15 +64,17 @@ const TrayectoriaYCrecimiento = () => {
   ];
 
   return (
-    <div className="page-header clear-filter trayectoria-style" id="trayectoria-y-crecimiento">
+    <div
+      className="page-header clear-filter trayectoria-style"
+      id="trayectoria-y-crecimiento"
+    >
       <Container className="principal-container">
         <Row>
           <div className="container-element">
-            
             <div
               className="section section-style"
               id="carousel"
-              style={{ backgroundColor: "#FCF9E5", width: "50%" }}
+              style={{ backgroundColor: "white", width: "50%" }}
             >
               <Col lg="10">
                 <Carousel
@@ -76,11 +89,39 @@ const TrayectoriaYCrecimiento = () => {
                   />
                   {items.map((item) => {
                     return (
-                      <CarouselItem key={item.src}>
+                      <CarouselItem
+                        key={item.src}
+                        onExiting={onExiting}
+                        onExited={onExited}
+                      >
                         <img src={item.src} />
                       </CarouselItem>
                     );
                   })}
+                  <a
+                    className="carousel-control-prev"
+                    data-slide="prev"
+                    href="#pablo"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      previous();
+                    }}
+                    role="button"
+                  >
+                    <i className="bi bi-chevron-compact-left icon-style"></i>
+                  </a>
+                  <a
+                    className="carousel-control-next"
+                    data-slide="next"
+                    href="#pablo"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      next();
+                    }}
+                    role="button"
+                  >
+                    <i className="bi bi-chevron-right icon-style"></i>
+                  </a>
                 </Carousel>
               </Col>
             </div>
@@ -104,7 +145,6 @@ const TrayectoriaYCrecimiento = () => {
                 Ver mas
               </Button>
             </Col>
-
           </div>
         </Row>
       </Container>
