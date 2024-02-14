@@ -211,6 +211,7 @@ const Contacto = () => {
                         placeholder="Nombre Completo..."
                         type="text"
                         value={nombreCompleto}
+                        style={{fontWeight:"bold"}}
                         onChange={(e) => setNombreCompleto(e.target.value)}
                         onFocus={() => setFirstFocus(true)}
                         onBlur={() => setFirstFocus(false)}
@@ -224,6 +225,7 @@ const Contacto = () => {
                       <Input
                         placeholder="Telefono..."
                         type="number"
+                        style={{fontWeight:"bold"}}
                         value={telefono}
                         onChange={(e) => setTelefono(e.target.value)}
                         onFocus={() => setLastFocus(true)}
@@ -238,6 +240,7 @@ const Contacto = () => {
                       <Input
                         placeholder="Email..."
                         type="text"
+                        style={{fontWeight:"bold"}}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                         onFocus={() => setEmailFocus(true)}
@@ -251,6 +254,7 @@ const Contacto = () => {
                     >
                       <Input
                         placeholder="Mensaje..."
+                        style={{fontWeight:"bold"}}
                         type="textarea"
                         value={mensaje}
                         onChange={(e) => setMensaje(e.target.value)}
@@ -263,7 +267,7 @@ const Contacto = () => {
                       placeholder="Escriba el Captcha."
                       type="text"
                       id="user_captcha_input"
-                      style={{ backgroundColor: "#393a60" }}
+                      style={{ backgroundColor: "#393a60",fontWeight:"bold" }}
                     ></Input>
                   </CardBody>
                   <CardFooter className="text-center card-footer-style">
