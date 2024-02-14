@@ -13,6 +13,7 @@ import texto_trayectoria_crecimiento from "./../../assets/img/texto_trayectoria_
 
 import carrusel from "./../../assets/img/carrusel_img_traye_1.png";
 import carrusel2 from "./../../assets/img/carrusel_img_traye_2.png";
+import carrusel3 from "./../../assets/img/carrusel_img_traye_3.png";
 
 import "./trayectoriaYCrecimiento.css";
 import TrayectoriaYCrecimientoModal from "./Modal/TrayectoriaYCrecimientoModal";
@@ -53,15 +54,12 @@ const TrayectoriaYCrecimiento = () => {
   const items = [
     {
       src: carrusel,
-      v: false,
     },
     {
       src: carrusel2,
-      v: false,
     },
     {
-      src: "https://www.youtube.com/embed/alF0vlKKySo?si=xh0HnHzi-9TXCv8-",
-      v: true,
+      src: carrusel3,
     },
   ];
 
@@ -96,18 +94,8 @@ const TrayectoriaYCrecimiento = () => {
                         onExiting={onExiting}
                         onExited={onExited}
                       >
-                        {item.v ? (
-                          <iframe
-                            width="445"
-                            height="445"
-                            src={item.src}
-                            title="YouTube video player"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            
-                          ></iframe>
-                        ) : (
                           <img src={item.src} />
-                        )}
+                        
                       </CarouselItem>
                     );
                   })}

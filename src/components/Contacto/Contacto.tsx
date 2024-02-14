@@ -169,17 +169,25 @@ const Contacto = () => {
                         target="_blank"
                         style={{backgroundColor:"#393a60",color:"white"}}
                       >
-                        <i className="fab fa-facebook-square"></i>
+                        <i className="fab fa-facebook-square" style={{color:"white"}}></i>
                       </Button>
                       <Button
                         className="btn-neutral btn-icon btn-round"
                         color="whatsapp"
                         href="https://wa.me/56987587393"
                         target="_blank"
-                        size="lg"
                         style={{backgroundColor:"#393a60",color:"white"}}
                       >
                         <i className="fab fa-whatsapp whatsapp-style" style={{color:"white"}}></i>
+                      </Button>
+                      <Button
+                        className="btn-neutral btn-icon btn-round"
+                        color="youtube"
+                        href="https://www.youtube.com/@MOLINOCANUELASCHILE"
+                        target="_blank"
+                        style={{backgroundColor:"#393a60",color:"white"}}
+                      >
+                        <i className="fab fa-youtube whatsapp-style" style={{color:"white"}}></i>
                       </Button>
                       <Button
                         className="btn-neutral btn-icon btn-round"
