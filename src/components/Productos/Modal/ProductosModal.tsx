@@ -3,7 +3,6 @@ import { ModalBody, Modal } from "reactstrap";
 
 //image
 import imgClose from "./../../../assets/img/close_icon.svg";
-import infoNutricional from "./../../../assets/img/info_nutri.png";
 import productosModal from "./../../../assets/img/productos_modal.png";
 import "./productosModal.css";
 
