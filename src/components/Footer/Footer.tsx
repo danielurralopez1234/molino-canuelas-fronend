@@ -21,7 +21,7 @@ const  Footer = () => {
            
             <div
                 className="blockquote blockquote-primary blockquote-style"
-                style={{ textAlign: "center" }}
+                style={{ textAlign: "center",backgroundColor:"white" }}
               >
                  <img
               style={{height:"28%"}}
