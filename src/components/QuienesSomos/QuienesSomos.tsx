@@ -92,7 +92,7 @@ const QuienesSomos = () => {
                 className="mr-1"
                 onClick={() => stateModalFunction()}
               >
-                Ver mas
+                <strong>Ver más</strong>
               </Button>
             </Col>
             <div

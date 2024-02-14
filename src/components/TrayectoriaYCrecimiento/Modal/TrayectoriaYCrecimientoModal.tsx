@@ -33,7 +33,7 @@ const TrayectoriaYCrecimientoModal = (props: IProps): ReturnType<FC> => {
         <ModalBody>
           <p className="blockquote blockquote-primary blockquote-style">
             <strong className="text-font-bold">HOY MOLINO CAÑUELAS CHILE con su primer producto de innovación en
-            HARINA ADELIA MARIA 000</strong>
+            HARINA ADELIA MARIA PANIFICADORA</strong>
             <br />
             <br />
             La compañía se consolidó en un grupo industrial que se especializa
