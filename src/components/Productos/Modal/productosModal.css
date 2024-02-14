@@ -5,3 +5,10 @@
 .text-font-bold {
     font-weight: bold;
 }
+
+.table-style-producto{
+    width: 100%;
+    margin-bottom: 1rem;
+    color:currentColor !important;
+    font-size: 0.8rem;
+}

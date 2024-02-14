@@ -167,6 +167,7 @@ const Contacto = () => {
                         color="facebook"
                         href="https://www.facebook.com/profile.php?id=100090204047178&mibextid=2JQ9oc"
                         target="_blank"
+                        style={{backgroundColor:"#bd7f3e"}}
                       >
                         <i className="fab fa-facebook-square"></i>
                       </Button>
@@ -176,6 +177,7 @@ const Contacto = () => {
                         href="https://wa.me/56987587393"
                         target="_blank"
                         size="lg"
+                        style={{backgroundColor:"#bd7f3e"}}
                       >
                         <i className="fab fa-whatsapp whatsapp-style"></i>
                       </Button>
@@ -184,13 +186,14 @@ const Contacto = () => {
                         color="instagram"
                         href="https://www.instagram.com/distribuidoraloslenos?igsh=MTdpamg1Mjl4YW9pcA=="
                         target="_blank"
+                        style={{backgroundColor:"#bd7f3e",color:"white"}}
                       >
                         <i className="fab fa-instagram"></i>
                       </Button>
                     </div>
                   </div>
 
-                  <CardBody>
+                  <CardBody style={{marginTop:"5%"}}>
                     <InputGroup
                       className={
                         "no-border" + (firstFocus ? " input-group-focus" : "")
