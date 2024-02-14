@@ -30,7 +30,7 @@ const ProductosModal = (props: IProps): ReturnType<FC> => {
         <ModalBody>
           <p className="blockquote blockquote-primary blockquote-style">
             <strong className="text-font-bold">
-              La harina Adelia María 000
+              La harina Adelia María
             </strong>{" "}
             se utiliza siempre en la elaboración de panes, ya que su alto
             contenido de proteínas , más fibra y hierro. Así posibilita la

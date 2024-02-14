@@ -167,7 +167,7 @@ const Contacto = () => {
                         color="facebook"
                         href="https://www.facebook.com/profile.php?id=100090204047178&mibextid=2JQ9oc"
                         target="_blank"
-                        style={{backgroundColor:"#bd7f3e"}}
+                        style={{backgroundColor:"#393a60",color:"white"}}
                       >
                         <i className="fab fa-facebook-square"></i>
                       </Button>
@@ -177,16 +177,16 @@ const Contacto = () => {
                         href="https://wa.me/56987587393"
                         target="_blank"
                         size="lg"
-                        style={{backgroundColor:"#bd7f3e"}}
+                        style={{backgroundColor:"#393a60",color:"white"}}
                       >
-                        <i className="fab fa-whatsapp whatsapp-style"></i>
+                        <i className="fab fa-whatsapp whatsapp-style" style={{color:"white"}}></i>
                       </Button>
                       <Button
                         className="btn-neutral btn-icon btn-round"
                         color="instagram"
                         href="https://www.instagram.com/distribuidoraloslenos?igsh=MTdpamg1Mjl4YW9pcA=="
                         target="_blank"
-                        style={{backgroundColor:"#bd7f3e",color:"white"}}
+                        style={{backgroundColor:"#393a60",color:"white"}}
                       >
                         <i className="fab fa-instagram"></i>
                       </Button>
@@ -255,7 +255,7 @@ const Contacto = () => {
                       placeholder="Escriba el Captcha."
                       type="text"
                       id="user_captcha_input"
-                      style={{ backgroundColor: "#bd7f3e" }}
+                      style={{ backgroundColor: "#393a60" }}
                     ></Input>
                   </CardBody>
                   <CardFooter className="text-center card-footer-style">
