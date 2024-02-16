@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import {
   // Button,
   // Card,
@@ -10,7 +10,7 @@ import {
   // InputGroup,
   Container,
   Row,
-  Col,
+  // Col,
 } from "reactstrap";
 // import {
 //   loadCaptchaEnginge,
@@ -20,10 +20,10 @@ import {
 
 import "./reparacion.css";
 
-import iconHorarioAtencion from "./../../assets/img/icon_horario_atencion.svg";
+// import iconHorarioAtencion from "./../../assets/img/icon_horario_atencion.svg";
 import iconTelefono from "./../../assets/img/icon_telefono.svg";
-import iconMap from "./../../assets/img/icon_map.svg";
-import contactoLogo from "./../../assets/img/contacto_logo.png";
+// import iconMap from "./../../assets/img/icon_map.svg";
+// import contactoLogo from "./../../assets/img/contacto_logo.png";
 
 const Reparacion = () => {
   // const [firstFocus, setFirstFocus] = useState(false);
