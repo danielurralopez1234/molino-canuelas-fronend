@@ -1,0 +1,53 @@
+.form-style {
+    background-color: #22244e !important;
+}
+
+.Card-Header-style {
+    background-color: #22244e !important;
+}
+
+.card-footer-style {
+    background-color: #22244e !important;
+}
+
+.card-signup-style {
+    background-color: #22244e !important;
+}
+
+.contacto-btn-style {
+    color: white !important;
+    background-color: #393a60 !important;
+}
+
+.text-font-bold {
+    font-weight: bold;
+}
+
+.whatsapp-style {
+    color: green;
+}
+
+.img-Contacto {
+    width: 27%;
+}
+
+.contacto-style {
+    background-color: white !important;
+}
+
+.blockquote-style {
+    border: 3px solid #888888 !important;
+}
+.blockquote.blockquote-primary {
+    color: #22244e !important;
+}
+
+@media screen and (max-width: 390px) {
+    .img-Contacto {
+        width: 60% !important;
+    }
+
+    .blockquote-style {
+        margin-top: 10%;
+    }
+}

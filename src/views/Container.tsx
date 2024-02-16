@@ -8,6 +8,9 @@ import "./../assets/css/whatsapp.css"
 // import Contacto from "../components/Contacto/Contacto";
 // import Footer from "../components/Footer/Footer";
 
+//solo en caso que se pida
+import Reparacion from "../components/Reparacion/Reparacion";
+
 
 const Container = () => {
 
@@ -25,21 +28,22 @@ const Container = () => {
 
   return (
     <>
-      {/* <IndexNavbar />
+      {/* <IndexNavbar /> */}
       <div className="wrapper">
-        <IndexHeader />
+        {/* <IndexHeader /> */}
         <div className="main">
-          <Productos />
+          {/* <Productos />
           <QuienesSomos/>
           <TrayectoriaYCrecimiento/>
           <Contacto />
-          <Footer />
+          <Footer /> */}
+          <Reparacion />
         </div>
-        <a href="https://wa.me/56987587393" target="_blank" className="whatsapp-btn">
+        {/* <a href="https://wa.me/56987587393" target="_blank" className="whatsapp-btn">
   <i className="bi bi-whatsapp"></i>
-</a>
+</a> */}
       </div>
-      */}
+     
     </>
   );
 }
