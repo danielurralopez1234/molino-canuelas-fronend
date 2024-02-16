@@ -1,12 +1,12 @@
 import { useEffect } from "react";
-import { IndexHeader, IndexNavbar } from '../components'
+// import { IndexHeader, IndexNavbar } from '../components'
 
 import "./../assets/css/whatsapp.css"
-import QuienesSomos from "../components/QuienesSomos/QuienesSomos";
-import TrayectoriaYCrecimiento from "../components/TrayectoriaYCrecimiento/TrayectoriaYCrecimiento";
-import Productos from "../components/Productos/Productos";
-import Contacto from "../components/Contacto/Contacto";
-import Footer from "../components/Footer/Footer";
+// import QuienesSomos from "../components/QuienesSomos/QuienesSomos";
+// import TrayectoriaYCrecimiento from "../components/TrayectoriaYCrecimiento/TrayectoriaYCrecimiento";
+// import Productos from "../components/Productos/Productos";
+// import Contacto from "../components/Contacto/Contacto";
+// import Footer from "../components/Footer/Footer";
 
 
 const Container = () => {
@@ -25,7 +25,7 @@ const Container = () => {
 
   return (
     <>
-      <IndexNavbar />
+      {/* <IndexNavbar />
       <div className="wrapper">
         <IndexHeader />
         <div className="main">
@@ -39,7 +39,7 @@ const Container = () => {
   <i className="bi bi-whatsapp"></i>
 </a>
       </div>
-     
+      */}
     </>
   );
 }
